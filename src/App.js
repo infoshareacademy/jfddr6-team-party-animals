@@ -1,17 +1,16 @@
-import Home from './components/Home';
-import Footer from './components/layout/Footer';
-import Header from './components/layout/Header';
-import CreateAccount from './customerportal/CreateAccount';
-import CustomerPortal from './customerportal/CustomerPortal';
+import Home from './components/Home'
+import Header from './components/layout/Header/Header'
+import CreateAccount from './customerportal/CreateAccount'
+import CustomerPortal from './customerportal/CustomerPortal'
 
 function App() {
-  return (
-    <div className="App">
-      Hello
-      <Header></Header>
-      <Footer />
-    </div>
-  );
+	return (
+		<div className='App'>
+			Hello
+			<Header></Header>
+
+		</div>
+	)
 }
 
-export default App;
+export default App
