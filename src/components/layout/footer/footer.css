@@ -1,0 +1,10 @@
+.root {
+  margin-top: 1rem;
+  padding: 2rem;
+  background-color: rgb(255, 172, 129);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+

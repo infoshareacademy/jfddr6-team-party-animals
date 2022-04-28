@@ -1,0 +1,10 @@
+.adress {
+  font-size: 1rem;
+  background-color: rgb(255, 146, 139);
+  line-height: 5;
+  padding: 0;
+  text-indent: 3rem;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+}
