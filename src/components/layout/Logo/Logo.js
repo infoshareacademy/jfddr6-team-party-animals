@@ -1,5 +1,9 @@
-const Logo = () => {
-  return <div>Logo</div>;
-};
+import React from 'react'
 
-export default Logo;
+const Logo = props => (
+	<div>
+		<img src={props.src} alt='blackPaw' />
+	</div>
+)
+
+export default Logo
