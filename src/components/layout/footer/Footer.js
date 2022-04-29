@@ -1,13 +1,15 @@
 import React from 'react';
 import Adress from './Adress';
-import styles from './footer.css';
+import './footer.css';
+import Map from './Map';
 import Social from './Social';
 
 const Footer = () => (
-  <div className={'root'}>
-    <p>Footer</p>
+  <div className={'footer'}>
     <Adress />
+    <Map />
     <Social />
+    <p>Footer</p>
   </div>
 );
 
