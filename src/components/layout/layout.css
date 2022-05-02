@@ -1,6 +1,0 @@
-.container {
-    height: calc(100vh - (headerHeight));
-    background: linear-gradient(215deg, rgba(223, 176, 110, 0.3));
-    display: flex;
-    justify-content: center;
-    align-items: center;}

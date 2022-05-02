@@ -5,7 +5,7 @@ import Layout from './components/layout/Layout'
 import Logo from './components/layout/logo'
 import CreateAccount from './customerportal/CreateAccount'
 import CustomerPortal from './customerportal/CustomerPortal'
-import { Route, Routes, Link, BrowserRouter as Router } from 'react-router-dom'
+import { Route, Routes, BrowserRouter as Router } from 'react-router-dom'
 import Offer from './pages/Offer'
 import Contact from './pages/Contact'
 import PriceList from './pages/PriceList'
@@ -19,11 +19,11 @@ function App() {
 				<Footer />
 				<div className='container'>
 					<Routes>
-						<Route path='/' element={<Home />} />
-						<Route path='/' element={<Offer />} />
-						<Route path='/' element={<PriceList />} />
-						<Route path='/' element={<CustomerPortal />} />
-						<Route path='/' element={<Contact />} />
+						<Route path='/home' element={<Home />} />
+						<Route path='/offer' element={<Offer />} />
+						<Route path='/priceList' element={<PriceList />} />
+						<Route path='/customerPortal' element={<CustomerPortal />} />
+						<Route path='/contact' element={<Contact />} />
 					</Routes>
 				</div>
 			</Router>

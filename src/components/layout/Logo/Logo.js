@@ -2,7 +2,7 @@ import React from 'react'
 
 const Logo = props => (
 	<div>
-		<img src={props.src} alt='blackPaw' />
+		<img src={props.src} />
 	</div>
 )
 

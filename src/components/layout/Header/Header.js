@@ -1,5 +1,4 @@
 import './header.css'
-import { MenuItem } from '../menuItem/MenuItem'
 import Logo from '../logo'
 import logo from '../../../content/logo.png'
 import HomeLogo from '../homeLogo/HomeLogo'
@@ -58,12 +57,12 @@ const Header = () => {
 				<nav className='header_content_nav'>
 					<ul>
 						<li>
-							<Link to='/home' onClick={menuToggleHandler}>
+							<Link to='/Home' onClick={menuToggleHandler}>
 								Home
 							</Link>
 						</li>
 						<li>
-							<Link to='/offer' onClick={menuToggleHandler}>
+							<Link to='/Offer' onClick={menuToggleHandler}>
 								Offer
 							</Link>
 						</li>
