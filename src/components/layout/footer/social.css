@@ -1,3 +1,26 @@
 .social {
-  background: rgb(255, 123, 129);
+  font-size: 1rem;
+  background: rgb(255, 146, 139);
+  padding: 0;
+  position: fixed;
+  bottom: 2rem;
+  left: 2rem;
+}
+
+.icon {
+  color: black;
+  font-style: normal;
+  letter-spacing: 20px;
+  font-family: 'fontello';
+  font-size: 2rem;
+  width: 100%;
+  opacity: 50%;
+  transform-origin: 0 0;
+  transform: scale(1);
+  transition: background-color 0.4s ease, transform 0.4s ease, color 0.4s;
+  will-change: background-color, transform, color;
+}
+
+.icon:hover {
+  transform: scale(1.5);
 }

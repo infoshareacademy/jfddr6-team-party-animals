@@ -1,9 +1,15 @@
 .footer {
   margin-top: 1rem;
   padding: 2rem;
-  background-color: rgb(255, 172, 129);
+  background: linear-gradient(#deaf6e, #9e825d);
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+/* p {
+  text-align: center;
+} */

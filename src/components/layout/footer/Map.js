@@ -3,8 +3,9 @@ import './map.css';
 const Map = () => {
   return (
     <>
-      git
-      <img src="./mapa.jpeg" />
+      <div className="img">
+        <img src={'./content/mapa.jpeg'} alt="" />
+      </div>
     </>
   );
 };
