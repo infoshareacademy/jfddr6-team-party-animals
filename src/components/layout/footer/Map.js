@@ -3,7 +3,7 @@ import './map.css';
 const Map = () => {
   return (
     <>
-      <div className="img">
+      <div className="image">
         <img src={'./content/mapa.jpeg'} alt="" />
       </div>
     </>

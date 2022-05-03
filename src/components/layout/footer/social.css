@@ -1,10 +1,20 @@
-.social {
+.socials {
   font-size: 1rem;
-  background: rgb(255, 146, 139);
   padding: 0;
-  position: fixed;
+  display: flex;
   bottom: 2rem;
-  left: 2rem;
+  right: 2rem;
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 1024px) {
+  .socials {
+    font-size: 1rem;
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    bottom: 10rem;
+    right: 5rem;
+  }
 }
 
 .icon {
@@ -14,13 +24,15 @@
   font-family: 'fontello';
   font-size: 2rem;
   width: 100%;
-  opacity: 50%;
+  opacity: 60%;
   transform-origin: 0 0;
   transform: scale(1);
   transition: background-color 0.4s ease, transform 0.4s ease, color 0.4s;
   will-change: background-color, transform, color;
 }
 
-.icon:hover {
-  transform: scale(1.5);
+@media screen and (min-width: 1024px) {
+  .icon:hover {
+    transform: scale(1.5);
+  }
 }

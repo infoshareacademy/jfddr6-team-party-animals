@@ -6,14 +6,12 @@ import Social from './Social';
 
 const Footer = () => (
   <>
-    <div className={'footer'}>
+    <footer className={'footer'}>
       <Adress />
-      <Social />
       <Map />
-      <div>
-        <p>Copyright Party Animal 2022</p>
-      </div>
-    </div>
+      <Social />
+    </footer>
+    <div className={'footer2'}>Copyright Party Animals 2022</div>
   </>
 );
 

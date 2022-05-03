@@ -2,22 +2,21 @@ import './social.css';
 
 const Social = () => {
   return (
-    <div className="social">
-      Social
+    <div className="socials">
       <a href="#" target={'_blank'}>
-        <span className="icon icon-instagram"></span>
+        <p className="icon icon-instagram"></p>
       </a>
       <a href="#" target={'_blank'}>
-        <span className="icon icon-facebook-circled"></span>
+        <p className="icon icon-facebook-circled"></p>
       </a>
       <a href="#" target={'_blank'}>
-        <span className="icon icon-github-circled"></span>
+        <p className="icon icon-github-circled"></p>
       </a>
       <a href="#" target={'_blank'}>
-        <span className="icon icon-linkedin-circled"></span>
+        <p className="icon icon-linkedin-circled"></p>
       </a>
       <a href="#" target={'_blank'}>
-        <span className="icon icon-twitter"></span>
+        <p className="icon icon-twitter"></p>
       </a>
     </div>
   );
