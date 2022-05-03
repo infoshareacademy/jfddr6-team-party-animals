@@ -9,6 +9,7 @@ import { Route, Routes, BrowserRouter as Router } from 'react-router-dom'
 import Offer from './pages/Offer'
 import Contact from './pages/Contact'
 import PriceList from './pages/PriceList'
+import Banner from './components/layout/banner/Banner'
 
 function App() {
 	return (
@@ -16,6 +17,7 @@ function App() {
 			<Router>
 				<Logo />
 				<Header />
+				<Banner />
 				<Footer />
 				<div className='container'>
 					<Routes>

@@ -6,6 +6,7 @@ import { BiMenuAltRight } from 'react-icons/bi'
 import { AiOutlineClose } from 'react-icons/ai'
 import React, { useEffect, useState } from 'react'
 import { Link, BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Banner from '../banner/Banner'
 
 const Header = () => {
 	const [menuOpen, setMenuOpen] = useState(false)
@@ -42,19 +43,15 @@ const Header = () => {
 
 	return (
 		<header className='header'>
-			<div className='header-content'>
-				<p>
-					<span></span>
-				</p>
-				<section>
+			<div className='header__content'>
+				<div className='__logo'>
 					<Logo src='./content/logo.png' />
-				</section>
-				<span></span>
-				<section>
+				</div>
+				<div className='home__logo'>
 					<HomeLogo src='./content/logo_home.png' />
-				</section>
+				</div>
 
-				<nav className='header_content_nav'>
+				<nav className='header__content__nav'>
 					<ul>
 						<li>
 							<Link to='/Home' onClick={menuToggleHandler}>
@@ -85,6 +82,9 @@ const Header = () => {
 				</nav>
 				<div className='header-content-toggle'></div>
 				{!menuOpen ? <BiMenuAltRight onClick={menuToggleHandler} /> : <AiOutlineClose onClick={menuToggleHandler} />}
+			</div>
+			<div className='banner'>
+				<Banner src='./content/banner.jpg' />
 			</div>
 		</header>
 	)
