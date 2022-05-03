@@ -10,6 +10,8 @@ import Offer from './pages/Offer'
 import Contact from './pages/Contact'
 import PriceList from './pages/PriceList'
 import Banner from './components/layout/banner/Banner'
+import './css/Layout.css'
+import './css/variables.css'
 
 function App() {
 	return (
