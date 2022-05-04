@@ -1,11 +1,10 @@
 import '../header/Header.css'
 import Logo from '../logo'
-import logo from '../../../content/logo.png'
 import HomeLogo from '../homeLogo/HomeLogo'
 import { BiMenuAltRight } from 'react-icons/bi'
 import { AiOutlineClose } from 'react-icons/ai'
 import React, { useEffect, useState } from 'react'
-import { Link, BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import Banner from '../banner/Banner'
 
 const Header = () => {
@@ -35,10 +34,6 @@ const Header = () => {
 
 	const menuToggleHandler = () => {
 		setMenuOpen(p => !p)
-	}
-
-	const ctaClickHandler = () => {
-		menuToggleHandler()
 	}
 
 	return (
