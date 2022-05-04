@@ -1,1 +1,15 @@
+@import './../../../css/Layout.css';
 
+.home__logo {
+	display: flex;
+	align-items: center;
+	height: 5px;
+	padding-bottom: 0%;
+	padding-top: 76px;
+}
+.home__logo img {
+	width: 800px;
+	height: 250px;
+	margin-top: 20px;
+	margin-left: 45px;
+}

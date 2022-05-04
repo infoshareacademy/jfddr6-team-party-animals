@@ -1,23 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
-.container {
-  height: calc(100vh - 100px);
-  margin: 0%;
-  background: #f4f4ff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
 
-.container h1 {
-  padding: 1.5rem 2.5rem;
-  background: -webkit-gradient(linear, left top, right top, from(#020024), color-stop(35%, #dfb06e), to(#e0e4e5));
-  background: linear-gradient(90deg, #020024 0%, #dfb06e 35%, #e0e4e5 100%);
-  border-radius: 12px calc(12px * 10);
+.container {
+	height: calc(100vh - 100px);
+	margin: 0%;
+	background: #f4f4ff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
-/*# sourceMappingURL=Layout.css.map */

@@ -1,4 +1,3 @@
-import '../header/Header.css'
 import Logo from '../logo'
 import HomeLogo from '../homeLogo/HomeLogo'
 import { BiMenuAltRight } from 'react-icons/bi'
@@ -6,6 +5,7 @@ import { AiOutlineClose } from 'react-icons/ai'
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Banner from '../banner/Banner'
+import '../header/header.css'
 
 const Header = () => {
 	const [menuOpen, setMenuOpen] = useState(false)
