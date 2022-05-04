@@ -5,12 +5,14 @@ import Map from './Map';
 import Social from './Social';
 
 const Footer = () => (
-  <div className={'footer'}>
-    <Adress />
-    <Map />
-    <Social />
-    <p>Footer</p>
-  </div>
+  <>
+    <footer className={'footer'}>
+      <Adress />
+      <Map />
+      <Social />
+    </footer>
+    <div className={'footer2'}>Copyright Party Animals 2022</div>
+  </>
 );
 
 export default Footer;
