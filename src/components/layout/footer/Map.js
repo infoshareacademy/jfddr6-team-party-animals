@@ -4,7 +4,7 @@ const Map = () => {
   return (
     <>
       <div className="image">
-        <img src={'./content/mapa.jpeg'} alt="" />
+        <img src={`${process.env.PUBLIC_URL}/content/mapa.jpeg`} alt="" />
       </div>
     </>
   );

@@ -2,9 +2,7 @@ import React from 'react'
 import './banner.css'
 
 const Banner = props => (
-	<div>
-		<img src={props.src} />
-	</div>
+		<img className='banner' src={props.src} />
 )
 
 export default Banner

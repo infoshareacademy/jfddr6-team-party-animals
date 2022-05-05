@@ -13,9 +13,6 @@ a {
   .adress {
     color: whitesmoke;
     padding: 0;
-    position: fixed;
-    bottom: 10rem;
-    left: 5rem;
   }
   a {
     color: inherit;

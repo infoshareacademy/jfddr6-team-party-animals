@@ -1,22 +1,20 @@
-import Home from './pages/Home'
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
+import Banner from './components/layout/banner/Banner'
 import Footer from './components/layout/footer/Footer'
 import Header from './components/layout/header/Header'
-import CreateAccount from './customerportal/CreateAccount'
-import CustomerPortal from './customerportal/CustomerPortal'
-import { Route, Routes, BrowserRouter as Router } from 'react-router-dom'
-import Offer from './pages/Offer'
-import Contact from './pages/Contact'
-import PriceList from './pages/PriceList'
-import Banner from './components/layout/banner/Banner'
 import './css/Layout.css'
+import CustomerPortal from './customerportal/CustomerPortal'
+import Contact from './pages/Contact'
+import Home from './pages/Home'
+import Offer from './pages/Offer'
+import PriceList from './pages/PriceList'
 
 function App() {
 	return (
 		<div className='App'>
 			<Router>
 				<Header />
-				<Banner />
-				<Footer />
+
 				<div className='container'>
 					<Routes>
 						<Route path='/home' element={<Home />} />
@@ -26,6 +24,8 @@ function App() {
 						<Route path='/contact' element={<Contact />} />
 					</Routes>
 				</div>
+				<Footer />
+
 			</Router>
 		</div>
 	)

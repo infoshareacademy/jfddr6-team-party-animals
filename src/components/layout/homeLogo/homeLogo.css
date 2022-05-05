@@ -8,8 +8,10 @@
 	padding-top: 76px;
 }
 .home__logo img {
+	/*width: 200px;*/
 	width: 800px;
 	height: 250px;
 	margin-top: 20px;
 	margin-left: 45px;
+	margin-right: -200px;
 }

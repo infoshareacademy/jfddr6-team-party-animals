@@ -5,32 +5,32 @@ import { AiOutlineClose } from 'react-icons/ai'
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Banner from '../banner/Banner'
-import '../header/header.css'
+import './Header.css'
 
 const Header = () => {
 	const [menuOpen, setMenuOpen] = useState(false)
-	const [size, setSize] = useState({
-		width: undefined,
-		height: undefined,
-	})
+	// const [size, setSize] = useState({
+	// 	width: undefined,
+	// 	height: undefined,
+	// })
 
-	useEffect(() => {
-		const handleResize = () => {
-			setSize({
-				width: window.innerWidth,
-				height: window.innerHeight,
-			})
-		}
-		window.addEventListener('resize', handleResize)
+	// useEffect(() => {
+	// 	const handleResize = () => {
+	// 		setSize({
+	// 			width: window.innerWidth,
+	// 			height: window.innerHeight,
+	// 		})
+	// 	}
+	// 	window.addEventListener('resize', handleResize)
+	//
+	// 	return () => window.removeEventListener('resize', handleResize)
+	// }, [])
 
-		return () => window.removeEventListener('resize', handleResize)
-	}, [])
-
-	useEffect(() => {
-		if (size.width > 768 && menuOpen) {
-			setMenuOpen(false)
-		}
-	}, [size.width, menuOpen])
+	// useEffect(() => {
+	// 	if (size.width > 768 && menuOpen) {
+	// 		setMenuOpen(false)
+	// 	}
+	// }, [size.width, menuOpen])
 
 	const menuToggleHandler = () => {
 		setMenuOpen(p => !p)
@@ -40,10 +40,10 @@ const Header = () => {
 		<header className='header'>
 			<div className='header__content'>
 				<div className='__logo'>
-					<Logo src='./content/logo.png' />
+					<Logo src='/content/logo.png' />
 				</div>
 				<div className='home__logo'>
-					<HomeLogo src='./content/logo_home.png' />
+					<HomeLogo src={`${process.env.PUBLIC_URL }/content/logo_home.png`} />
 				</div>
 
 				<nav className='header__content__nav'>
@@ -79,9 +79,7 @@ const Header = () => {
 				<div className='header-content-toggle'></div>
 				{!menuOpen ? <BiMenuAltRight onClick={menuToggleHandler} /> : <AiOutlineClose onClick={menuToggleHandler} />}
 			</div>
-			<div className='banner'>
-				<Banner src='./content/banner.jpg' />
-			</div>
+				<Banner src={`${process.env.PUBLIC_URL}/content/banner.jpg`} />
 		</header>
 	)
 }
