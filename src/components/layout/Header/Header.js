@@ -47,6 +47,7 @@ const Header = () => {
 				</div>
 
 				<nav className='header__content__nav'>
+					{/* {menuOpen && size.width < 768 ? setMenuOpen}/> */}
 					<ul>
 						<li>
 							<Link to='/Home' onClick={menuToggleHandler}>
