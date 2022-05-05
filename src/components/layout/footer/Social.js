@@ -7,7 +7,6 @@ const Social = () => {
       <a href="#" target={'_blank'} className="icon icon-facebook-circled"></a>
       <a href="#" target={'_blank'} className="icon icon-github-circled"></a>
       <a href="#" target={'_blank'} className="icon icon-linkedin-circled"></a>
-      <a href="#" target={'_blank'} className="icon icon-twitter-circled"></a>
     </div>
   );
 };

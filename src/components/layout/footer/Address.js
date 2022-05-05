@@ -1,7 +1,7 @@
-import './adress.css';
-const Adress = () => {
+import './address.css';
+const Address = () => {
   return (
-    <div className="adress">
+    <div className="address">
       Party Animals Inc.<br></br> California <br></br>Pet Street
       <address>
         <a
@@ -11,10 +11,10 @@ const Adress = () => {
           partyanimals2022pl@gmail.com
         </a>
         <br />
-        <a href="tel:+13115552368">(311) 555-2368</a>
+        <a href="tel+123) 555-animals">(+123) 555-animals</a>
       </address>
     </div>
   );
 };
 
-export default Adress;
+export default Address;
