@@ -1,6 +1,6 @@
 .adress {
-  color: whitesmoke;
   text-align: center;
+  padding: 10px;
 }
 a {
   color: inherit;
@@ -11,7 +11,7 @@ a {
 
 @media screen and (min-width: 1024px) {
   .adress {
-    color: whitesmoke;
+    color: rgb(224, 228, 229);
     padding: 0;
   }
   a {
