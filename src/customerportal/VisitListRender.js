@@ -3,23 +3,36 @@ import { useEffect, useState } from 'react';
 import { collection, getDocs, query, where } from 'firebase/firestore';
 import { auth, db } from '../db';
 
-const VisitListRender = ({ users }) => {
+const VisitListRender = () => {
   const signOutUser = () => {
     signOut(auth);
   };
   const [visits, setVisits] = useState([]);
+  const [users, setUsers] = useState([]);
 
   const getVisits = async () => {
     const collectiona = collection(db, 'users');
-    //const quer = query(collectiona, where(users.id, '==', users.id));
+    // const quer = query(collectiona, where(name.id, '==', user.id));
     const usersCollection = await getDocs(collectiona);
 
     const users = usersCollection.docs.map((doc) => ({
       id: doc.id,
       data: doc.data(),
     }));
+    console.log(users);
 
+    const user = users.map((el) => ({
+      id: el.id,
+      data: el.data,
+    }));
+
+    console.log(user);
+
+    setUsers(user[0].data.name);
     setVisits(users[0].data.visits);
+    console.log(user[0].data.name); // Bartek
+    console.log(users[0].data.visits); //0: {name: 'burek', date: at}     1: {name: 'reksio', date: at}
+    console.log(users[0].id);
   };
 
   useEffect(() => {
@@ -29,7 +42,7 @@ const VisitListRender = ({ users }) => {
     visits.map((visit) => {
       const dateVisit = new Date(visit.date.toMillis());
       return (
-        <div key={visit.name}>
+        <div key={users[0].id}>
           <h3>Your puppy name: {visit.name}</h3>
 
           <span>
@@ -49,7 +62,7 @@ const VisitListRender = ({ users }) => {
 
   return (
     <div>
-      <h2>You are log in as: bartek-ciupa@o2.pl </h2>
+      <h2>You are log in as: {users}</h2>
       {renderVisits()}
       <div>
         <button onClick={signOutUser}>Wyloguj się</button>
