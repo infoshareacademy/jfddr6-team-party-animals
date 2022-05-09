@@ -10,18 +10,15 @@ import SignUp from "./customerportal/SignUp";
 function App() {
   return (
     <div className="App">
-      Hello
-      <Header></Header>
-      <CustomerPortal />
-      <CreateAccount />
-      <hr />
-      <Login />
-      <hr />
-      <ResetPassword />
-      <hr />
-      <SignUp />
-      <hr />
-      <Footer />
+      <div className="user-container">
+        <CreateAccount />
+        <hr />
+        <Login />
+        <hr />
+        <ResetPassword />
+        <hr />
+        <SignUp />
+      </div>
     </div>
   );
 }

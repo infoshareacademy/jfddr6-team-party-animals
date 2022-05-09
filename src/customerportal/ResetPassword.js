@@ -19,7 +19,7 @@ const ResetPassword = () => {
 
   return (
     <div>
-      <h1>ResetPassword</h1>
+      <h3>ResetPassword</h3>
       <form onSubmit={handleSubmit}>
         <input
           type="text"

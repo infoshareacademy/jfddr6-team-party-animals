@@ -25,7 +25,7 @@ const CreateAccount = () => {
 
   return (
     <div>
-      <h1>Create account</h1>
+      <h3>Create account</h3>
       <form onSubmit={handleRegister}>
         <input
           type="text"
