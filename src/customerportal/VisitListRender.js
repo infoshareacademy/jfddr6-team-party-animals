@@ -1,44 +1,58 @@
+import { signOut } from 'firebase/auth';
 import { useEffect, useState } from 'react';
-import { setDoc, doc, deleteDoc } from 'firebase/firestore';
-import { db } from '../db';
-import { collection, Firestore, getDocs } from 'firebase/firestore';
+import { collection, getDocs, query, where } from 'firebase/firestore';
+import { auth, db } from '../db';
 
-const VisitListRender = ({ id, users }) => {
-  const [visit, setVisit] = useState(['']);
+const VisitListRender = ({ users }) => {
+  const signOutUser = () => {
+    signOut(auth);
+  };
+  const [visits, setVisits] = useState([]);
 
   const getVisits = async () => {
-    const Collection = collection(db, 'users');
-    const usersCollection = await getDocs(Collection);
+    const collectiona = collection(db, 'users');
+    //const quer = query(collectiona, where(users.id, '==', users.id));
+    const usersCollection = await getDocs(collectiona);
 
-    const data1 = usersCollection.docs.map((doc) => ({
+    const users = usersCollection.docs.map((doc) => ({
       id: doc.id,
       data: doc.data(),
     }));
-    const visit = data1.docs.map((doc) => ({
-      id: doc.id,
-      data: doc.data(),
-    }));
-    console.log(visit);
-    setVisit(visit);
+
+    setVisits(users[0].data.visits);
   };
+
   useEffect(() => {
     getVisits();
-  });
+  }, []);
+  const renderVisits = () =>
+    visits.map((visit) => {
+      const dateVisit = new Date(visit.date.toMillis());
+      return (
+        <div key={visit.name}>
+          <h3>Your puppy name: {visit.name}</h3>
 
-  const renderVisits = () => (
-    <ul>
-      {users.map((user) => (
-        <li key={users.id}>1.{visit}</li>
-      ))}
-    </ul>
-  );
+          <span>
+            Your visits:
+            <p>
+              Time: {dateVisit.getHours()}:{dateVisit.getMinutes()}
+              {dateVisit.getMinutes()}
+            </p>
+            <p>
+              Date: {dateVisit.getDate()} - {'0' + (dateVisit.getMonth() + 1)} -{' '}
+              {dateVisit.getFullYear()}
+            </p>
+          </span>
+        </div>
+      );
+    });
 
   return (
     <div>
-      <h2>Wizyty użytkownika: bartek-ciupa@o2.pl </h2>
-      <>{renderVisits()}</>
+      <h2>You are log in as: bartek-ciupa@o2.pl </h2>
+      {renderVisits()}
       <div>
-        <button>Wyloguj się</button>
+        <button onClick={signOutUser}>Wyloguj się</button>
       </div>
     </div>
   );
