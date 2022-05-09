@@ -1,16 +1,17 @@
-import { useState } from "react";
-import { signInWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../db";
+import { useState } from 'react';
+import { signInWithEmailAndPassword } from 'firebase/auth';
+import { auth } from '../db';
+import ResetPassword from './ResetPassword';
 
 const Login = () => {
-  const [inputEmail, setInputEmail] = useState("");
-  const [inputPassword, setInputPassword] = useState("");
+  const [inputEmail, setInputEmail] = useState('');
+  const [inputPassword, setInputPassword] = useState('');
 
   const loginUser = async (email, password) => {
     await signInWithEmailAndPassword(auth, email, password).then((response) => {
-      console.log("login", response, response.user);
-      setInputEmail("");
-      setInputPassword("");
+      console.log('login', response, response.user);
+      setInputEmail('');
+      setInputPassword('');
     });
   };
 
@@ -37,6 +38,7 @@ const Login = () => {
         />
         <button type="submit">Login</button>
       </form>
+      <ResetPassword />
     </div>
   );
 };

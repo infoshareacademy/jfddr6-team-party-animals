@@ -1,6 +1,5 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './css/Layout.css';
-import Contact from './pages/Contact';
 import Home from './pages/Home';
 import Offer from './pages/Offer';
 import PriceList from './pages/PriceList';
@@ -10,7 +9,6 @@ import Header from './components/layout/header/Header';
 import CreateAccount from './customerportal/CreateAccount';
 import CustomerPortal from './customerportal/CustomerPortal';
 import Login from './customerportal/Login';
-import ResetPassword from './customerportal/ResetPassword';
 import SignUp from './customerportal/SignUp';
 
 function App() {
@@ -18,28 +16,18 @@ function App() {
     <div className="App">
       <Router>
         <Header />
-
         <div className="container">
           <Routes>
             <Route path="/home" element={<Home />} />
             <Route path="/offer" element={<Offer />} />
             <Route path="/priceList" element={<PriceList />} />
             <Route path="/customerPortal" element={<CustomerPortal />} />
-            <Route path="/contact" element={<Contact />} />
+            <Route path="/createAccount" element={<CreateAccount />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signUp" element={<SignUp />} />
           </Routes>
         </div>
       </Router>
-      <div>
-        <CustomerPortal />
-        <CreateAccount />
-        <hr />
-        <Login />
-        <hr />
-        <ResetPassword />
-        <hr />
-        <SignUp />
-        <hr />
-      </div>
       <Footer />
     </div>
   );
