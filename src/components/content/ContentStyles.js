@@ -1,14 +1,6 @@
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
 
-export const ContentSec = styled.div`
-	padding: 100px 0;
-	background: #fff;
-	@media screen and (max-width: 768px) {
-		padding: 70px 0;
-	}
-`
-
 export const ContentRow = styled.div`
 	display: flex;
 	margin: 0 -15px -15px -15px;
@@ -61,13 +53,13 @@ export const TextWrapper = styled.div`
 
 export const ImgWrapper = styled(motion.div)`
 	display: flex;
-	justify-content: ${({ imgStart}) => (imgStart ? 'flex-start' : 'flex-end')};
+	justify-content: ${({ imgstart }) => (imgstart ? 'flex-start' : 'flex-end')};
 	max-height: 600px;
 	justify-content: center;
 	box-shadow: 0 0 32px 4px #dfdfdf;
 	border-radius: 1rem;
 	position: relative;
-	background: ${({ backgroundColor }) => (backgroundColor ? backgroundColor : '#fafeff')};
+	background: ${({ backgroundcolor }) => (backgroundcolor ? backgroundcolor : '#fafeff')};
 	&:before {
 		width: 100%;
 		height: 100%;
