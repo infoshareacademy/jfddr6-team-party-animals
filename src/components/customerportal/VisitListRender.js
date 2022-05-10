@@ -1,7 +1,7 @@
-import { signOut } from 'firebase/auth';
-import { useEffect, useState } from 'react';
-import { collection, getDocs, query, where } from 'firebase/firestore';
-import { auth, db } from '../db';
+import { signOut } from "firebase/auth";
+import { useEffect, useState } from "react";
+import { collection, getDocs, query, where } from "firebase/firestore";
+import { auth, db } from "./../../db";
 
 const VisitListRender = () => {
   const signOutUser = () => {
@@ -11,7 +11,7 @@ const VisitListRender = () => {
   const [users, setUsers] = useState([]);
 
   const getVisits = async () => {
-    const collectiona = collection(db, 'users');
+    const collectiona = collection(db, "users");
     // const quer = query(collectiona, where(name.id, '==', user.id));
     const usersCollection = await getDocs(collectiona);
 
@@ -52,7 +52,7 @@ const VisitListRender = () => {
               {dateVisit.getMinutes()}
             </p>
             <p>
-              Date: {dateVisit.getDate()} - {'0' + (dateVisit.getMonth() + 1)} -{' '}
+              Date: {dateVisit.getDate()} - {"0" + (dateVisit.getMonth() + 1)} -{" "}
               {dateVisit.getFullYear()}
             </p>
           </span>
