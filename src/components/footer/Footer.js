@@ -1,5 +1,5 @@
 import React from 'react';
-import Adress from './Adress';
+import Address from './Address';
 import './footer.css';
 import Map from './Map';
 import Social from './Social';
@@ -7,7 +7,7 @@ import Social from './Social';
 const Footer = () => (
   <>
     <footer className={'footer'}>
-      <Adress />
+      <Address />
       <Map />
       <Social />
     </footer>
