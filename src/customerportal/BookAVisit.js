@@ -10,16 +10,16 @@ const BookAVisit = () => {
     const groomer = inputGroomer;
     const date = inputDate;
 
-    await setDoc(doc(db, "users", userId, `${visits}`), {
-      groomer: groomer,
-      date: date,
-    });
+    // await setDoc(doc(db, "users", userId, `${visits}`), {
+    //   groomer: groomer,
+    //   date: date,
+    // });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const bookedVisit = { groomer, date };
-    console.log(bookedVisit);
+    // const bookedVisit = { groomer, date };
+    // console.log(bookedVisit);
   };
 
   return (
