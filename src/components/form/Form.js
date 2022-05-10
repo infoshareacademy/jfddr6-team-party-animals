@@ -14,19 +14,24 @@ import { Container } from '../../globalStyles'
 import validateForm from './validateForm'
 const Form = () => {
 	const [name, setName] = useState('')
-	const [email, setEmail] = useState('')
-
+	const [email, setEmail] = useState('');
+	const [password, setPassword]=useState('');
+	const [confirmPassword,setConfirmPassword]=useState('');
 	const [error, setError] = useState(null)
 	const [success, setSuccess] = useState(null)
+	
+	
 	const handleSubmit = e => {
 		e.preventDefault()
-		const resultError = validateForm({ name, email })
+		const resultError = validateForm({ name, email, password, confirmPassword })
 		if (resultError !== null) {
 			setError(resultError)
 			return
 		}
 		setName('')
-		setEmail('')
+		setEmail('');
+		setPassword('');
+		setConfirmPassword('');
 		setError(null)
 		setSuccess('Sign up was correct!')
 	}
@@ -37,6 +42,8 @@ const Form = () => {
 	const formData = [
 		{ label: 'Name', value: name, onChange: e => setName(e.target.value), type: 'text' },
 		{ label: 'Email', value: email, onChange: e => setEmail(e.target.value), type: 'email' },
+		{ label: 'Password',value:password, onChange:(e)=> setPassword(e.target.value), type:'password'},
+		{label: 'Confirm Password',value:confirmPassword, onChange: (e) => setConfirmPassword(e.target.value), type:'password'},
 
 	]
 	return (
