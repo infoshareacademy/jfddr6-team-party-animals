@@ -15,6 +15,7 @@ import {
 import { useInView } from 'react-intersection-observer'
 import Modal from '../Modal/Modal'
 
+
 const Hero = () => {
 	const [showModal, setShowModal] = useState(false)
 	const dragConstaints = { top: 0, bottom: 0, right: 0, left: 0 }
@@ -28,15 +29,6 @@ const Hero = () => {
 		setShowModal(!showModal)
 	}
 
-	const variants = {
-		hover: {
-			y: 15,
-			transition: {
-				yoyo: Infinity,
-				duration: 0.6,
-			},
-		},
-	}
 	const { ref, inView } = useInView({
 		rootMargin: '-100px',
 	})
@@ -47,27 +39,11 @@ const Hero = () => {
 	return (
 		<>
 			<HeroSection id='hero'>
-			<HeroImage className='pattern' src={`${process.env.PUBLIC_URL}/images/hero-pattern-bg-lg.png`} />
-                <HeroImage className='cat' src={`${process.env.PUBLIC_URL}/images/hero-cat-1.png`} />
+				<HeroImage className='pattern' src={`${process.env.PUBLIC_URL}/images/hero-pattern-bg-lg.png`} />
+				<HeroImage className='cat' src={`${process.env.PUBLIC_URL}/images/hero-cat-1.png`} />
 				<CharacterContainer>
-					<ImageCharacter
-						dragConstaints={dragConstaints}
-						className='picOne'
-						src={`${process.env.PUBLIC_URL}/images/image 1.png`}
-					/>
-					<ImageCharacter
-						dragConstaints={dragConstaints}
-						className='picTwo'
-						src={`${process.env.PUBLIC_URL}/images/image 2.png`}
-					/>
-					<ImageCharacter
-						variants={variants}
-						whileHover='hover'
-						drag
-						dragConstaints={dragConstaints}
-						className='picThree'
-						src={`${process.env.PUBLIC_URL}/images/image 3.png`}
-					/>
+				<ImageCharacter className='picTwo' src={`${process.env.PUBLIC_URL}/images/image 2.png`} />
+					<ImageCharacter className='picThree' src={`${process.env.PUBLIC_URL}/images/image 3.png`} />
 				</CharacterContainer>
 				<HeroContent>
 					<Heading>Grooming Stars</Heading>

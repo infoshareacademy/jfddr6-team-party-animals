@@ -31,7 +31,7 @@ export const FeatureTextWrapper = styled.div`
 		position: absolute;
 		bottom: 0;
 		left: 50%;
-		background-color: #ef4b6c;
+		background-color: #dfb06e;
 		transform: translateX(-50%);
 	}
 `
@@ -70,23 +70,14 @@ export const FeatureColumn = styled.div`
 export const FeatureImageWrapper = styled.div`
 	margin-bottom: 1rem;
 	border-radius: 50%;
-	&.one {
-		background: linear-gradient(130deg, #9cb3ff 0%, #b0ffe9 100%);
+	&.gromming {
+		background: linear-gradient(130deg, #dfb06e 0%, #020024 100%);
 	}
-	&.two {
-		background: linear-gradient(220deg, #e7d1ff 0%, #8383ef 100%);
+	&.shampoo {
+		background: linear-gradient(130deg, #dfb06e 0%, #020024 100%);
 	}
-	&.three {
-		background: linear-gradient(130deg, #ff8989 0%, #ffddc5 100%);
-	}
-	&.four {
-		background: linear-gradient(130deg, #ffa8e8 0%, #ffe6e6 100%);
-	}
-	&.five {
-		background: linear-gradient(130deg, #ffaf73 0%, #fffecc 100%);
-	}
-	&.six {
-		background: linear-gradient(130deg, #59dbb0 0%, #feffb5 100%);
+	&.teeth {
+		background: linear-gradient(130deg, #dfb06e 0%, #020024 100%);
 	}
 
 	padding: 30px;

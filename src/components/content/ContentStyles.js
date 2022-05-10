@@ -53,35 +53,15 @@ export const TextWrapper = styled.div`
 		align-items: center;
 	}
 
-	> img {
+	&.img {
 		width: 300px;
 		margin-left: -3px;
 	}
 `
 
-export const ContentButton = styled(motion.button)`
-	height: 3rem;
-	padding: 16px 32px;
-	font-weight: 700;
-	font-size: 0.8rem;
-	line-height: 18px;
-	letter-spacing: 1.54px;
-	text-transform: uppercase;
-	border-radius: 25px;
-	border: none;
-	background: ${({ backgroundColor }) => (backgroundColor ? backgroundColor : '#fafeff')};
-	cursor: pointer;
-	color: white;
-
-	&:hover {
-		box-shadow: 0 0 32px 4px #cfcfcf;
-		transition: box-shadow 0.3s ease-in;
-	}
-`
-
 export const ImgWrapper = styled(motion.div)`
 	display: flex;
-	justify-content: ${({ imgStart }) => (imgStart ? 'flex-start' : 'flex-end')};
+	justify-content: ${({ imgStart}) => (imgStart ? 'flex-start' : 'flex-end')};
 	max-height: 600px;
 	justify-content: center;
 	box-shadow: 0 0 32px 4px #dfdfdf;
@@ -101,7 +81,7 @@ export const ImgWrapper = styled(motion.div)`
 	}
 `
 
-export const TopLine = styled(motion.div)`
+export const TopLine = styled.div`
 	font-size: 0.9rem;
 	line-height: 16px;
 	font-weight: 700;
@@ -122,7 +102,7 @@ export const Img = styled(motion.img)`
 	z-index: 1;
 `
 
-export const Heading = styled(motion.h2)`
+export const Heading = styled.h2`
 	margin-bottom: 24px;
 	font-size: 2rem;
 	line-height: 1.1;
@@ -134,7 +114,7 @@ export const Heading = styled(motion.h2)`
 	}
 `
 
-export const Subtitle = styled(motion.p)`
+export const Subtitle = styled.p`
 	max-width: 440px;
 	margin-bottom: 35px;
 	line-height: 24px;

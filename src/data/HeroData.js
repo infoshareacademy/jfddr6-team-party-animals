@@ -1,62 +1,25 @@
-export const heroOne = {
+export const partOne = {
 	id: 'offer',
 	topLine: {
-		text: 'Illustration Design',
+		text: 'Full Grooming Services',
 	},
-	headline: 'Redesigning prisma',
-	description: 'Designing various vectors to match the themes of our clients. Find out more! ',
-	buttonLabel: 'View Project',
-	imgStart: 'start',
-	img: './images/content/rocket.svg',
-	backgroundColor: 'linear-gradient(  150deg,#c99fff -20%,#4a4eff)',
-	start: 'true',
-}
-
-export const heroTwo = {
-	reverse: true,
-	topLine: {
-		text: 'Development and Design',
-	},
-	headline: 'Beautiful Landing Page for Lifecycle',
-	description: "Our team worked for various clients, I don't know what else to write here, it's not my job!",
-	buttonLabel: 'View Project',
-
-	linkTo: '/more',
-	imgStart: 'start',
-	img: './images/content/landing-page.svg',
-	backgroundColor: 'linear-gradient(  140deg  ,#ffaf73 30%,#fffecc 120%)',
-
-	start: 'true',
-}
-
-export const heroThree = {
-	topLine: {
-		text: 'Development',
-	},
-	headline: "Innovative API's ",
+	headline: 'The New Haircut For Your Dog',
 	description:
-		'Our team has amazing developers that can turn any design sketches and ideas into a fully functioning product.',
-	buttonLabel: 'View Project',
-
-	linkTo: '/download',
-	imgStart: '',
-	backgroundColor: 'linear-gradient(104deg, rgba(151,147,218,1) 0%, rgba(183,137,205,1) 100%)',
-	img: './images/content/lost.svg',
+		'Keeping your pet groomed provides many benefits besides a fresh hair cut. Grooming can provide early detection of health-related issues, minimizes shedding, keeps nails short to maintain a healthy foot, and helps maintain good oral hygiene. ',
+	backgroundColor: 'linear-gradient(  150deg,#e0e4e5, #dfb06e, #020024)',
+	img: './images/image 4.png',
 	start: 'true',
 }
 
-export const heroFour = {
+export const partTwo = {
 	reverse: true,
 	topLine: {
-		text: 'Photography and Development',
+		text: 'Bath With Aromatherapy Mist',
 	},
-	headline: 'New ECommerce systems',
-	description: 'We take your products and make them look better than they already are!',
-	buttonLabel: 'View Project',
-
-	linkTo: '/more',
-	imgStart: '',
-	backgroundColor: 'linear-gradient(225deg,#0abac2,#b2de94)',
-	img: './images/content/ecommerce.svg',
+	headline: 'Best in Show Resort Pet Points Rewards',
+	description:
+		'Our Dog Grooming Salon & Spa offers all the luxuries you expect from a human spa. Whether your pup needs a clean up after a day of fun or just some pampering, your pet is guaranteed to look amazing after a luxurious day at our spa. We’ll make your pet look fabulous!',
+	img: './images/image 7.png',
+	backgroundColor: 'linear-gradient(  150deg  ,#e0e4e5, #dfb06e, #020024)',
 	start: 'true',
 }

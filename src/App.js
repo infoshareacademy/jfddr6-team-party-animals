@@ -6,6 +6,7 @@ import Navbar from './components/Navbar/Navbar'
 import CustomerPortal from './components/customerportal/CustomerPortal'
 import Offer from './pages/Offer'
 import PriceList from './pages/PriceList'
+import './fontello/css/fontello.css'
 
 function App() {
 	return (
@@ -13,7 +14,10 @@ function App() {
 			<GlobalStyle />
 			<Navbar />
 			<Routes>
-				<Route path='/' component={HomePage} />
+				<Route path='/' element={<HomePage />} />
+				<Route path='/' element={<Offer/>}/>
+				<Route path='/' element={<PriceList/>}/>
+				<Route path='/' element={<CustomerPortal/>}/>
 			</Routes>
 
 			<Footer />
@@ -21,4 +25,4 @@ function App() {
 	)
 }
 
-export default App;
+export default App

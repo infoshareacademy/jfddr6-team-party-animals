@@ -27,15 +27,17 @@ export const NavLogo = styled(Link)`
 	justify-self: flex-start;
 	cursor: pointer;
 	text-decoration: none;
-	font-size: 2rem;
+	font-size: 2.5rem;
 	display: flex;
 	align-items: center;
 	z-index: 99;
 `
 
 export const NavIcon = styled.img`
-	margin-right: 0.2rem;
-	width: 3rem;
+	width: 4rem;
+	transform: rotate(-25deg);
+	align-items: flex-start;
+	display:flex;
 `
 
 export const MobileIcon = styled.div`
@@ -72,7 +74,7 @@ export const NavMenu = styled.ul`
 		visibility: ${({ show }) => (show ? 'visible' : 'hidden')};
 		transform: translateY(${({ show }) => (show ? '0' : '-10px')});
 		transition: opacity 0.5s ease;
-		background-color: #41d0e1;
+		background-color: #dfb06e;
 	}
 
 	> li:first-child {
@@ -102,7 +104,7 @@ export const NavLinks = styled(Link)`
 	height: 100%;
 
 	&:hover {
-		border-bottom: 2px solid #ec421d;
+		border-bottom: 2px solid #020024;
 	}
 
 	@media screen and (max-width: 960px) {
@@ -113,7 +115,7 @@ export const NavLinks = styled(Link)`
 
 		&:hover {
 			border-bottom: none;
-			color: #4b59f7;
+			color: #dfb06e;
 			transition: all 0.3s ease;
 		}
 	}

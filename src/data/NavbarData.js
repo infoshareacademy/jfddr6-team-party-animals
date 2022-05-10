@@ -1,22 +1,19 @@
 export const navbarData = [
 	{
-		to: 'about',
+		to: 'creative',
 		text: 'Home',
 	},
 	{
-		to: 'clients',
+		to: 'offer',
 		text: 'Offer',
 	},
 	{
-		to: 'projects',
+		to: 'price list',
 		text: 'Price List',
 	},
 	{
-		to: 'projects',
+		to: 'customer portal',
 		text: 'Customer Portal',
 	},
-	{
-		to: 'projects',
-		text: 'Contact',
-	},
+	
 ]

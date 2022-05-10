@@ -18,7 +18,8 @@ const Features = () => {
 		<FeatureSection id='about'>
 			<Container>
 				<FeatureTextWrapper>
-					<FeatureTitle>What We Do</FeatureTitle>
+					<FeatureTitle>Creative Grooming Cuts And Styles</FeatureTitle>
+
 				</FeatureTextWrapper>
 				<FeatureWrapper>
 					{featuresData.map((el, index) => (

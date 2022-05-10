@@ -39,30 +39,22 @@ export const HeroImage = styled.img`
 
 	&.cat {
 		bottom: 0;
+		width: 800px;
+		left: 0px;
 	}
 `
 
-export const ImageCharacter = styled(motion.img)`
+export const ImageCharacter = styled.img`
 	z-index: 11;
-	width: 100%;
 	position: absolute;
 	width: clamp(90px, 15vw, 200px);
 	left: auto;
-
-	&.picOne {
-		top: 4rem;
-		right: 200px;
-		width: clamp(170px, 15vw, 230px);
-
-		@media screen and (max-width: 768px) {
-			right: 50%;
-			transform: translateX(50%);
-		}
 	}
 
 	&.picTwo {
-		bottom: 4rem;
-		right: 200px;
+		bottom: 2.5rem;
+		right: 100px;
+		width: 350px;
 		z-index: 100;
 		@media screen and (max-width: 768px) {
 			right: 50px;
@@ -70,8 +62,10 @@ export const ImageCharacter = styled(motion.img)`
 	}
 
 	&.picThree {
-		top: 3rem;
-		left: 150px;
+		top: 180px;
+		left: 450px;
+		width:600px;
+		
 
 		@media screen and (max-width: 768px) {
 			display: none;
@@ -95,15 +89,16 @@ export const HeroContent = styled.div`
 `
 
 export const Heading = styled.h1`
-	margin-bottom: 1.5rem;
-	font-size: clamp(2.8rem, 6vw, 6.7rem);
+	margin-bottom: 90px;
+	font-size: clamp(3rem, 6vw, 6.7rem);
 	line-height: 1.1;
-	font-weight: 600;
+	font-weight: 700;
 	text-align: center;
 	color: white;
 `
 
 export const HeroText = styled.div`
+	margin-bottom: 100px;
 	text-align: center;
 	font-size: clamp(0.9rem, 1.5vw, 1.3rem);
 `
@@ -147,12 +142,12 @@ export const HeroButton = styled(motion.button)`
 		width: 64px;
 		height: 64px;
 		padding: 10px;
-		background-color: #ef4b6c;
+		background-color: #dfb06e;
 		border-radius: 50%;
 	}
 
 	&:hover {
-		box-shadow: 0 0 9px 9px #5238b1;
+		box-shadow: 0 0 9px 9px #dfb06e;
 		transition: box-shadow 03s ease-in;
 	}
 `
