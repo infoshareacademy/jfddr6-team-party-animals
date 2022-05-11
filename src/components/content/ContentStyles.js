@@ -57,7 +57,7 @@ export const ImgWrapper = styled(motion.div)`
 	max-height: 600px;
 	justify-content: center;
 	box-shadow: 0 0 32px 4px #dfdfdf;
-	border-radius: 1rem;
+	border-radius: 2%;
 	position: relative;
 	background: ${({ backgroundcolor }) => (backgroundcolor ? backgroundcolor : '#fafeff')};
 	&:before {

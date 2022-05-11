@@ -135,6 +135,20 @@ export const HeroButton = styled(motion.button)`
 	cursor: pointer;
 	transition: all 0.4s ease-in;
 
+	&::before {
+		pointer-events: none;
+		content: '';
+		position: absolute;
+		background: white;
+		top: 60%;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		transform: perspective(8px) rotateX(20deg) scale(1, 0.35);
+		filter: blur(1em);
+		opacity: 0.9;
+	}
+
 	&.corner {
 		position: fixed;
 		bottom: 3rem;
