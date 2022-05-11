@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
-import { auth } from "./../../db";
-import ResetPassword from "./ResetPassword";
+import { auth } from "../../../db";
+import ResetPassword from "../ResetPassword";
 import {
 	FormColumn,
 	FormWrapper,
@@ -13,7 +13,7 @@ import {
 	FormInputRow,
 	FormButton,
 } from './LoginStyles';
-import { Container } from "../../globalStyles";
+import { Container } from "../../../globalStyles";
 
 const Login = () => {
   const [inputEmail, setInputEmail] = useState("");
@@ -54,7 +54,7 @@ const Login = () => {
           onChange={(e) => setInputPassword(e.target.value)}
         />
 		</FormInputRow>
-       <FormButton type='submit'>Create Account</FormButton>
+       <FormButton type='submit'>Sign Up</FormButton>
       </FormWrapper>
 	  
       <ResetPassword />

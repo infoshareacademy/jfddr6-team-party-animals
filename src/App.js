@@ -7,7 +7,7 @@ import CustomerPortal from './components/customerportal/CustomerPortal'
 import Offer from './pages/Offer'
 import PriceList from './pages/PriceList'
 import './fontello/css/fontello.css'
-import Login from './components/customerportal/Login'
+import Login from './components/customerportal/login/Login'
 import NavbarUser from './components/customerportal/NavbarUser'
 
 function App() {

@@ -4,7 +4,7 @@ import { FaTimes } from 'react-icons/fa'
 import { IconContext } from 'react-icons'
 import { Nav, NavbarContainer, NavLogo, NavIcon, MobileIcon, NavMenu, NavLinks, NavItem } from '../Navbar/NavbarStyles'
 import './NavbarUserStyles'
-import Login from './Login'
+import Login from './login/Login';
 import { auth } from '../../db'
 import { publicNavbarData, privateNavbarData } from './../../data/NavbarData'
 
