@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { motion } from 'framer-motion'
 export const FormSection = styled.div`
 	padding: clamp(50px, 30vh, 100px) 0;
 	border-radius: 30px;
@@ -68,12 +67,6 @@ export const FormButton = styled.button`
 		transition: background-color 0.4s ease-in;
 	}
 `
-export const FormMessage = styled(motion.div)`
-	color: ${({ error }) => (error ? 'red' : 'green')};
-	padding: 5px;
-	text-align: center;
-	margin-top: 1rem;
-`
 export const FormInputRow = styled.div`
 	display: flex;
 	justify-content: center;
@@ -96,10 +89,4 @@ export const FormInput = styled.input`
 	border: none;
 	font-size: 1rem;
 	border-bottom: 1px solid #cecece;
-`
-export const FormLabel = styled.label`
-	display: inline-block;
-	font-size: 0.9rem;
-	margin-bottom: 0.3rem;
-	color: #666;
 `

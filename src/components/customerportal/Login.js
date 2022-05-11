@@ -1,17 +1,29 @@
-import { useState } from 'react';
-import { signInWithEmailAndPassword } from 'firebase/auth';
-import { auth } from '../db';
-import ResetPassword from './ResetPassword';
+import { useState } from "react";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "./../../db";
+import ResetPassword from "./ResetPassword";
+import {
+	FormColumn,
+	FormWrapper,
+	FormInput,
+	FormSection,
+	FormRow,
+	FormTitle,
+	FormLabel,
+	FormInputRow,
+	FormButton,
+} from './LoginStyles';
+import { Container } from "../../globalStyles";
 
 const Login = () => {
-  const [inputEmail, setInputEmail] = useState('');
-  const [inputPassword, setInputPassword] = useState('');
+  const [inputEmail, setInputEmail] = useState("");
+  const [inputPassword, setInputPassword] = useState("");
 
   const loginUser = async (email, password) => {
     await signInWithEmailAndPassword(auth, email, password).then((response) => {
-      console.log('login', response, response.user);
-      setInputEmail('');
-      setInputPassword('');
+      console.log("login", response, response.user);
+      setInputEmail("");
+      setInputPassword("");
     });
   };
 
@@ -21,25 +33,37 @@ const Login = () => {
   };
 
   return (
-    <div>
-      <h1>Login</h1>
-      <form onSubmit={handleSubmit}>
-        <input
+    <FormSection>
+			<Container>
+				<FormRow>
+					<FormColumn>
+						<FormTitle>Sign Up</FormTitle>
+      <FormWrapper onSubmit={handleSubmit}>
+		  <FormInputRow>
+
+        <FormInput
           type="text"
           value={inputEmail}
           placeholder="Email"
           onChange={(e) => setInputEmail(e.target.value)}
         />
-        <input
+        <FormInput
           type="password"
           value={inputPassword}
           placeholder="Password"
           onChange={(e) => setInputPassword(e.target.value)}
         />
-        <button type="submit">Login</button>
-      </form>
+		</FormInputRow>
+       <FormButton type='submit'>Create Account</FormButton>
+      </FormWrapper>
+	  
       <ResetPassword />
-    </div>
+	  </FormColumn>
+				</FormRow>
+			</Container>
+		</FormSection>
+
+
   );
 };
 

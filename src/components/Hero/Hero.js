@@ -27,9 +27,7 @@ const Hero = () => {
 		setShowModal(!showModal)
 	}
 
-	const { ref, inView } = useInView({
-		rootMargin: '-100px',
-	})
+	const { ref, inView } = useInView()
 	useEffect(() => {
 		console.log(inView)
 	}, [inView])

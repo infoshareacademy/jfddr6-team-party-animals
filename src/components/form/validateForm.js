@@ -1,4 +1,4 @@
-export default function validateForm({ name, email, subject, message }) {
+export default function validateForm({ name, email }) {
 	if (!name.trim()) {
 		return 'Username required'
 	}
@@ -9,13 +9,6 @@ export default function validateForm({ name, email, subject, message }) {
 	} else if (regex.test(email.toLocalLowerCase)) {
 		return 'Email address is invalid'
 	}
-	if (!subject) {
-		return 'Subject is required'
-	} else if (subject.length < 3) {
-		return 'Subject needs to be 3characters or more'
-	}
-	if (!message) {
-		return 'Message subject is required'
-	}
+
 	return null
 }

@@ -1,13 +1,19 @@
-import React, { useState } from 'react'
+import React, { useState, useMemo, useEffect } from 'react'
 import { CgMenuRight } from 'react-icons/cg'
 import { FaTimes } from 'react-icons/fa'
 import { IconContext } from 'react-icons'
 import { Nav, NavbarContainer, NavLogo, NavIcon, MobileIcon, NavMenu, NavLinks, NavItem } from './NavbarStyles'
-import { navbarData } from './../../data/NavbarData'
+import { publicNavbarData, privateNavbarData } from './../../data/NavbarData'
+import { auth } from '../../db'
+
 
 const Navbar = () => {
+	const [isLogged,setIsLogged] = useState(!!auth.currentUser);
+	const navbarData = isLogged ? privateNavbarData : publicNavbarData
 	const [show, setShow] = useState(false)
+	auth.onAuthStateChanged((user)=>setIsLogged(!!user))
 
+	useEffect(() => console.log(auth.currentUser, isLogged), [isLogged])
 	const scrollTo = id => {
 		const element = document.querySelector(id)
 		element.scrollIntoView({
@@ -33,7 +39,7 @@ const Navbar = () => {
 					<NavMenu show={show}>
 						{navbarData.map((el, index) => (
 							<NavItem key={index}>
-								<NavLinks to='/' onClick={() => closeMobileMenu(el.to)}>
+								<NavLinks to={el.to} onClick={() => closeMobileMenu(el.to)}>
 									{el.text}
 								</NavLinks>
 							</NavItem>
