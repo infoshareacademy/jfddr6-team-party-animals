@@ -1,6 +1,6 @@
-import { signOut } from "firebase/auth";
+import { onAuthStateChanged, signOut } from "firebase/auth";
 import { useEffect, useState } from "react";
-import { collection, getDocs, query, where } from "firebase/firestore";
+import { getDoc, doc } from "firebase/firestore";
 import { auth, db } from "./../../db";
 
 const VisitListRender = () => {
@@ -11,7 +11,7 @@ const VisitListRender = () => {
   const [users, setUsers] = useState([]);
 
   const getVisits = async (docId) => {
-    const docReference = doc(db, 'users', docId);
+    const docReference = doc(db, "users", docId);
     // const quer = query(collectiona, where(name.id, '==', user.id));
     const userDocument = await getDoc(docReference);
 
@@ -29,25 +29,17 @@ const VisitListRender = () => {
       if (jwt === null) {
         return;
       }
-      console.log('jwt', jwt.uid);
+      console.log("jwt", jwt.uid);
       getVisits(jwt.uid);
     });
   }, []);
   const renderVisits = () =>
     visits.map((visit) => {
-      const dateVisit = new Date(visit.date.toMillis());
       return (
         <div>
-          <h3>Your puppy name: {visit.name}</h3>
           <span>
-            Your visits:
-            <p>
-              Time: {dateVisit.getHours()}:{dateVisit.getMinutes()}
-            </p>
-            <p>
-              Date: {dateVisit.getDate()} - {"0" + (dateVisit.getMonth() + 1)} -{" "}
-              {dateVisit.getFullYear()}
-            </p>
+            <p>Date: {visit.date}</p>
+            <h3>Your groomer: {visit.groomer}</h3>
           </span>
         </div>
       );
@@ -55,7 +47,8 @@ const VisitListRender = () => {
 
   return (
     <div>
-      <h2>You are log in as: {users}</h2>
+      <h2>You are logged in as: {users}</h2>
+      <h2>Your visits:</h2>
       {renderVisits()}
       <div>
         <button onClick={signOutUser}>Wyloguj się</button>

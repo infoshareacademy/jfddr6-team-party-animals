@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { doc, setDoc } from "firebase/firestore";
-import { auth, db } from "../db";
+import { auth, db } from "./../../db";
 
 const authUser = async (email, password) => {
   const response = await createUserWithEmailAndPassword(auth, email, password);
@@ -24,13 +24,15 @@ const CreateAccount = () => {
     e.preventDefault();
     const registeredUser = await authUser(inputEmail, inputPassword);
     const userId = registeredUser.uid;
-    //const initialVisits = [];
     console.log(userId);
     await createUserMetadata({
       id: userId,
       name: inputName,
       visits: [],
     });
+    setInputEmail("");
+    setInputPassword("");
+    setInputName("");
   };
 
   return (

@@ -1,27 +1,28 @@
-import { setDoc, doc } from "firebase/firestore";
-import { auth, db } from "../db.js";
+import { arrayUnion, updateDoc, doc } from "firebase/firestore";
+import { auth, db } from "./../../db";
 import { useState } from "react";
 
-const BookAVisit = () => {
+const BookAVisit = ({ userUid }) => {
   const [inputGroomer, setGroomer] = useState("Tommy");
   const [inputDate, setDate] = useState("");
 
-  const bookNewVisit = async () => {
+  // const bookNewVisit = async () => {
+  //   const groomer = inputGroomer;
+  //   const date = inputDate;
+  // };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
     const groomer = inputGroomer;
     const date = inputDate;
 
-    // await setDoc(doc(db, "users", userId, `${visits}`), {
-    //   groomer: groomer,
-    //   date: date,
-    // });
-  };
+    const bookedVisit = { groomer, date };
+    console.log(bookedVisit);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // const bookedVisit = { groomer, date };
-    // console.log(bookedVisit);
+    await updateDoc(doc(db, "users", userUid), {
+      visits: arrayUnion({ date: date, groomer: groomer }),
+    });
   };
-
   return (
     <>
       <div className="bookingform">
