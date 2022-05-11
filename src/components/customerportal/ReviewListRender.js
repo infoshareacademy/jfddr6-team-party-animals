@@ -3,16 +3,15 @@ import { useEffect, useState } from "react";
 import { getDoc, doc } from "firebase/firestore";
 import { auth, db } from "./../../db";
 
-const VisitListRender = () => {
+const ReviewListRender = () => {
   const signOutUser = () => {
     signOut(auth);
   };
-  const [visits, setVisits] = useState([]);
+  const [reviews, setReviews] = useState([]);
   const [users, setUsers] = useState([]);
 
-  const getVisits = async (docId) => {
-    const docReference = doc(db, "users", docId);
-    // const quer = query(collectiona, where(name.id, '==', user.id));
+  const getReviews = async (docId) => {
+    const docReference = doc(db, "reviews", docId);
     const userDocument = await getDoc(docReference);
 
     const user = {
@@ -21,7 +20,7 @@ const VisitListRender = () => {
     };
 
     setUsers(user.data.name);
-    setVisits(user.data.visits);
+    setReviews(user.data.reviews);
   };
 
   useEffect(() => {
@@ -30,16 +29,20 @@ const VisitListRender = () => {
         return;
       }
       console.log("jwt", jwt.uid);
-      getVisits(jwt.uid);
+      getReviews(jwt.uid);
     });
   }, []);
-  const renderVisits = () =>
-    visits.map((visit) => {
+  const renderReviews = () =>
+    reviews.map((review) => {
       return (
-        <div key={visit.date + visit.groomer}>
+        <div key={review.date + review.petname}>
           <span>
-            <p>Date: {visit.date}</p>
-            <h3>Your groomer: {visit.groomer}</h3>
+            <p>Date: {review.date}</p>
+            <h3>Your groomer: {review.groomer}</h3>
+            <h3>Your name: {review.ownername}</h3>
+            <h3>Pets name: {review.petname}</h3>
+            <h3>Review: {review.reviewtext}</h3>
+            <h3>Rating: {review.rating}</h3>
           </span>
         </div>
       );
@@ -48,8 +51,8 @@ const VisitListRender = () => {
   return (
     <div>
       <h2>You are logged in as: {users}</h2>
-      <h2>Your visits:</h2>
-      {renderVisits()}
+      <h2>Your reviews:</h2>
+      {renderReviews()}
       <div>
         <button onClick={signOutUser}>Wyloguj się</button>
       </div>
@@ -57,4 +60,4 @@ const VisitListRender = () => {
   );
 };
 
-export default VisitListRender;
+export default ReviewListRender;

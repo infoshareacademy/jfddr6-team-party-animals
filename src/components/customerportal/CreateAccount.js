@@ -15,6 +15,13 @@ const createUserMetadata = async ({ id, name, visits }) => {
   });
 };
 
+const createUserInitialReview = async ({ id, name, reviews }) => {
+  await setDoc(doc(db, "reviews", id), {
+    name,
+    reviews,
+  });
+};
+
 const CreateAccount = () => {
   const [inputEmail, setInputEmail] = useState("");
   const [inputPassword, setInputPassword] = useState("");
@@ -29,6 +36,11 @@ const CreateAccount = () => {
       id: userId,
       name: inputName,
       visits: [],
+    });
+    await createUserInitialReview({
+      id: userId,
+      name: inputName,
+      reviews: [],
     });
     setInputEmail("");
     setInputPassword("");
