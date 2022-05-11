@@ -28,9 +28,6 @@ const Hero = () => {
 	}
 
 	const { ref, inView } = useInView()
-	useEffect(() => {
-		console.log(inView)
-	}, [inView])
 
 	return (
 		<>

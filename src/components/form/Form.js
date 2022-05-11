@@ -12,6 +12,10 @@ import {
 } from './FormStyles'
 import { Container } from '../../globalStyles'
 import validateForm from './validateForm'
+import { auth, db } from './../../db'
+import { createUserWithEmailAndPassword } from 'firebase/auth'
+import { doc, setDoc } from 'firebase/firestore'
+
 const Form = () => {
 	const [name, setName] = useState('')
 	const [email, setEmail] = useState('')
@@ -20,8 +24,16 @@ const Form = () => {
 	const [error, setError] = useState(null)
 	const [success, setSuccess] = useState(null)
 
+	console.log(error, success)
+
+	const registerUser = async (email, password) => {
+		const response = await createUserWithEmailAndPassword(auth, email, password)
+		return response.user.uid
+	}
+
 	const handleSubmit = e => {
 		e.preventDefault()
+
 		const resultError = validateForm({ name, email, password, confirmPassword })
 		if (resultError !== null) {
 			setError(resultError)
@@ -34,6 +46,19 @@ const Form = () => {
 		setConfirmPassword('')
 		setError(null)
 		setSuccess('Sign up was correct!')
+
+		registerUser(email, password).then(id => {
+			const userDoc = doc(db, 'users', id)
+			const reviewDoc = doc(db, 'reviews', id)
+			setDoc(userDoc, {
+				name,
+				visits: [],
+			})
+			setDoc(reviewDoc, {
+				name,
+				reviews: [],
+			})
+		})
 	}
 	const messageVariants = {
 		hidden: { y: 30, opacity: 0 },
@@ -51,7 +76,7 @@ const Form = () => {
 		},
 	]
 
-	console.log('formData', formData)
+	// console.log('formData', formData)
 	return (
 		<FormSection>
 			<Container>
@@ -68,14 +93,16 @@ const Form = () => {
 							<FormButton type='submit'>Create Account</FormButton>
 						</FormWrapper>
 						{error && (
-							<FormInput variants={messageVariants} initial='hidden' animate='animate' error>
-								{error}
-							</FormInput>
+							<>
+								<FormInput variants={messageVariants} initial='hidden' animate='animate' />
+								<p> {error}</p>
+							</>
 						)}
 						{success && (
-							<FormInput variants={messageVariants} initial='hidden' animate='animate'>
-								{success}
-							</FormInput>
+							<>
+								<FormInput variants={messageVariants} initial='hidden' animate='animate' />
+								<p> {success}</p>
+							</>
 						)}
 					</FormColumn>
 				</FormRow>

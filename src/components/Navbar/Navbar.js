@@ -13,7 +13,7 @@ const Navbar = () => {
 	const [show, setShow] = useState(false)
 	auth.onAuthStateChanged((user)=>setIsLogged(!!user))
 
-	useEffect(() => console.log(auth.currentUser, isLogged), [isLogged])
+	useEffect(() => console.log("AUTH LOGGER:",auth.currentUser, isLogged), [isLogged])
 	const scrollTo = id => {
 		const element = document.querySelector(id)
 		element.scrollIntoView({

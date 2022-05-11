@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
+
+
 export const FormSection = styled.div`
 	padding: clamp(50px, 30vh, 100px) 0;
 	border-radius: 30px;

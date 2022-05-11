@@ -115,7 +115,7 @@ const Login = () => {
 								/>
 							</FormInputRow>
 							<FormButton type='submit'>Sign Up</FormButton>
-							<FormButton type='submit'>Sign Up</FormButton>
+							<FormButton type='submit'>Sign Out</FormButton>
 						</FormWrapper>
 						<ResetPassword />
 					</FormColumn>

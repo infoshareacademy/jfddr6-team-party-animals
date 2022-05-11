@@ -35,6 +35,7 @@ export const HeroImage = styled.img`
 		height: 100%;
 		max-height: 100%;
 		top: 0;
+		max-width: 100%;
 	}
 
 	&.cat {
