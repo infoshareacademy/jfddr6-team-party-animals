@@ -1,49 +1,4 @@
-import { Link } from 'react-router-dom'
-
 import styled from 'styled-components'
-
-export const Nav = styled.div`
-	background-image: linear-gradient(to bottom right, #e0e4e5, #dfb06e, #020024);
-	background-size: cover;
-	background-attachment: fixed;
-	z-index: 11;
-	align-items: center;
-	height: 640px;
-	position: relative;
-	display: flex;
-
-	@media screen and (min-width: 768px) {
-		height: 592px;
-	}
-
-	@media screen and (min-width: 992px) {
-		height: 710px;
-	}
-
-	@media screen and (min-width: 1200px) {
-		height: 1200px;
-	}
-`
-
-export const NavbarContainer = styled.img`
-	z-index: 10;
-	position: absolute;
-	left: 0;
-	object-fit: cover;
-
-	&.pattern {
-		height: 100%;
-		max-height: 100%;
-		top: 0;
-	}
-
-	&.cat {
-		bottom: 0;
-		width: 800px;
-		left: 0px;
-	}
-`
-
 export const FormSection = styled.div`
 	padding: clamp(50px, 30vh, 100px) 0;
 	border-radius: 30px;
@@ -91,6 +46,7 @@ export const FormWrapper = styled.form`
 	max-width: 540px;
 	padding-top: 0;
 	width: 100%;
+	left
 `
 export const FormButton = styled.button`
 	background-color: #dfb06e;
