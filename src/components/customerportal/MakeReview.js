@@ -74,7 +74,7 @@ const MakeReview = ({ userUid }) => {
             value={inputOwnerName}
             onChange={(e) => setOwnerName(e.target.value)}
           ></input>
-          <label>Rate our service:</label>
+          <label>Rate our service(0-5 STARS): {inputRating} STARS </label>
           <input
             type="range"
             min="0"
