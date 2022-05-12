@@ -9,6 +9,7 @@ import {
   getDocs,
 } from "firebase/firestore";
 import { auth, db } from "./../../db";
+import React from "react";
 
 const ReviewListRender = () => {
   const signOutUser = () => {
@@ -42,9 +43,9 @@ const ReviewListRender = () => {
   }, []);
   const renderReviews = (reviews) => {
     console.log(reviews);
-    return reviews.map((review) => {
+    return reviews.map((review, i) => {
       return (
-        <>
+        <React.Fragment key={i}>
           <p>Client name:{review.name}</p>
           {review.reviews.map((review) => {
             return (
@@ -60,7 +61,7 @@ const ReviewListRender = () => {
               </div>
             );
           })}
-        </>
+        </React.Fragment>
       );
     });
   };

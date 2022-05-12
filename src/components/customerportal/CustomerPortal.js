@@ -1,6 +1,6 @@
 import VisitListRender from "./VisitListRender";
 import BookAVisit from "./BookAVisit";
-import Login from "./Login";
+import Login from "./login/Login";
 import CreateAccount from "./CreateAccount";
 import MakeReview from "./MakeReview";
 import ReviewListRender from "./ReviewListRender";
