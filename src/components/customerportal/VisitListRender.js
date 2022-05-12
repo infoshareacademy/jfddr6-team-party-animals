@@ -10,46 +10,39 @@ const VisitListRender = () => {
   const [visits, setVisits] = useState([]);
   const [users, setUsers] = useState([]);
 
-  const getVisits = async () => {
-    const collectiona = collection(db, "users");
+  const getVisits = async (docId) => {
+    const docReference = doc(db, 'users', docId);
     // const quer = query(collectiona, where(name.id, '==', user.id));
-    const usersCollection = await getDocs(collectiona);
+    const userDocument = await getDoc(docReference);
 
-    const users = usersCollection.docs.map((doc) => ({
-      id: doc.id,
-      data: doc.data(),
-    }));
-    console.log(users);
+    const user = {
+      id: userDocument.id,
+      data: userDocument.data(),
+    };
 
-    const user = users.map((el) => ({
-      id: el.id,
-      data: el.data,
-    }));
-
-    console.log(user);
-
-    setUsers(user[0].data.name);
-    setVisits(users[0].data.visits);
-    console.log(user[0].data.name); // Bartek
-    console.log(users[0].data.visits); //0: {name: 'burek', date: at}     1: {name: 'reksio', date: at}
-    console.log(users[0].id);
+    setUsers(user.data.name);
+    setVisits(user.data.visits);
   };
 
   useEffect(() => {
-    getVisits();
+    onAuthStateChanged(auth, (jwt) => {
+      if (jwt === null) {
+        return;
+      }
+      console.log('jwt', jwt.uid);
+      getVisits(jwt.uid);
+    });
   }, []);
   const renderVisits = () =>
     visits.map((visit) => {
       const dateVisit = new Date(visit.date.toMillis());
       return (
-        <div key={users[0].id}>
+        <div>
           <h3>Your puppy name: {visit.name}</h3>
-
           <span>
             Your visits:
             <p>
               Time: {dateVisit.getHours()}:{dateVisit.getMinutes()}
-              {dateVisit.getMinutes()}
             </p>
             <p>
               Date: {dateVisit.getDate()} - {"0" + (dateVisit.getMonth() + 1)} -{" "}
