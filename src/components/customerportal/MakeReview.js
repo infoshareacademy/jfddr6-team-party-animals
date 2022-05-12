@@ -24,7 +24,6 @@ const MakeReview = ({ userUid }) => {
 
     const addedReview = { groomer, date, reviewtext, petname, rating };
     console.log(addedReview);
-    navigate('/panel');
 
     await updateDoc(doc(db, 'reviews', userUid), {
       reviews: arrayUnion({
@@ -36,6 +35,7 @@ const MakeReview = ({ userUid }) => {
         rating: rating,
       }),
     });
+    navigate('/panel');
   };
   return (
     <Container>
@@ -89,7 +89,7 @@ const MakeReview = ({ userUid }) => {
               onChange={(e) => setRating(e.target.value)}
             ></input>
 
-            <button>Add review</button>
+            <button type="submit">Add review</button>
           </form>
         </div>
       </ContentRow>
