@@ -12,8 +12,8 @@ const CustomerPortal = ({ userUid }) => {
         <div>
           <VisitList />
           <BookAVisit userUid={userUid} />
-          <ReviewList />
           <NavLink to="/makereview">Add review</NavLink>
+          <ReviewList />
         </div>
       </ContentRow>
     </Container>

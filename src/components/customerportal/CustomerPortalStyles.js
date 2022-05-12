@@ -3,30 +3,14 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
 export const Container = styled.div`
-  background-size: cover;
-  width: 100vw;
-  align-items: center;
-  height: 100%;
-  position: relative;
   display: flex;
   margin: 0;
-  padding: 0;
-
-  @media screen and (min-width: 768px) {
-    height: 592px;
-  }
-
-  @media screen and (min-width: 992px) {
-    height: 710px;
-  }
-
-  @media screen and (min-width: 1200px) {
-    height: 1200px;
-  }
-
-  @media screen and (max-width: 960px) {
-    padding: 0 30px;
-  }
+  display: flex;
+  padding: 15px;
+  justify-content: flex-start;
+  border: solid 2px #ab33;
+  width: 100vw;
+  height: 100%;
 `;
 export const ContentRow = styled.div`
   display: flex;

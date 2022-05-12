@@ -37,7 +37,7 @@ const ReviewListRender = () => {
       return (
         <Root>
           <React.Fragment key={i}>
-            <h3>Client name:{review.name}</h3>
+            <h3>{review.name}</h3>
             {review.reviews.map((review) => {
               return (
                 <Review key={review.date + review.petname}>

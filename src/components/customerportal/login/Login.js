@@ -1,6 +1,6 @@
-import { signInWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../../../db";
-import ResetPassword from "../resetpassword/ResetPassword";
+import { signInWithEmailAndPassword } from 'firebase/auth';
+import { auth } from '../../../db';
+import ResetPassword from '../resetpassword/ResetPassword';
 import {
   FormColumn,
   FormWrapper,
@@ -8,31 +8,30 @@ import {
   FormSection,
   FormRow,
   FormTitle,
-  FormLabel,
   FormInputRow,
   FormButton,
-} from "./LoginStyles";
-import { Container } from "../../../globalStyles";
-import React, { useState, useEffect, useMemo } from "react";
-import { useNavigate } from "react-router-dom";
+} from './LoginStyles';
+import { Container } from '../../../globalStyles';
+import React, { useState, useEffect, useMemo } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
-  const [inputEmail, setInputEmail] = useState("");
-  const [inputPassword, setInputPassword] = useState("");
+  const [inputEmail, setInputEmail] = useState('');
+  const [inputPassword, setInputPassword] = useState('');
   const navigate = useNavigate();
 
   const loginUser = async (email, password) => {
     await signInWithEmailAndPassword(auth, email, password).then((response) => {
-      console.log("login", response, response.user);
-      setInputEmail("");
-      setInputPassword("");
+      console.log('login', response, response.user);
+      setInputEmail('');
+      setInputPassword('');
     });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     loginUser(inputEmail, inputPassword);
-    navigate("/panel");
+    navigate('/panel');
   };
 
   return (

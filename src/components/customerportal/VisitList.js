@@ -2,7 +2,7 @@ import { onAuthStateChanged, signOut } from 'firebase/auth';
 import { useEffect, useState } from 'react';
 import { getDoc, doc } from 'firebase/firestore';
 import { auth, db } from './../../db';
-import { Nav } from './VisitlListStyles';
+import { Root, Visit } from './VisitlListStyles';
 
 const VisitList = () => {
   const signOutUser = () => {
@@ -36,23 +36,23 @@ const VisitList = () => {
   const renderVisits = () =>
     visits.map((visit) => {
       return (
-        <div key={visit.date + visit.groomer}>
+        <Visit key={visit.date + visit.groomer}>
           <span>
             <p>Date: {visit.date}</p>
             <h3>Your groomer: {visit.groomer}</h3>
           </span>
-        </div>
+        </Visit>
       );
     });
 
   return (
-    <Nav>
+    <Root>
       <div>
         <h2>You are logged in as: {users}</h2>
         <h2>Your visits:</h2>
         {renderVisits()}
       </div>
-    </Nav>
+    </Root>
   );
 };
 

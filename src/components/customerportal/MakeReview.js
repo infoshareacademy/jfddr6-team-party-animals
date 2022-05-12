@@ -1,8 +1,8 @@
 import { arrayUnion, updateDoc, doc } from 'firebase/firestore';
-import { auth, db } from './../../db';
+import { db } from './../../db';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Container, ContentRow, ContentColumn } from './MakeReviewStyles';
+import { Container, ContentRow } from './MakeReviewStyles';
 
 const MakeReview = ({ userUid }) => {
   const [inputGroomer, setGroomer] = useState('Tommy');
@@ -24,6 +24,7 @@ const MakeReview = ({ userUid }) => {
 
     const addedReview = { groomer, date, reviewtext, petname, rating };
     console.log(addedReview);
+    navigate('/panel');
 
     await updateDoc(doc(db, 'reviews', userUid), {
       reviews: arrayUnion({
@@ -35,7 +36,6 @@ const MakeReview = ({ userUid }) => {
         rating: rating,
       }),
     });
-    navigate('/panel');
   };
   return (
     <Container>
