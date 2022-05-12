@@ -13,6 +13,8 @@ import { useState } from 'react'
 import { onAuthStateChanged } from 'firebase/auth'
 import { auth } from './db'
 import NavbarWrapp from './components/NavbarWrapp'
+import MakeReview from './components/customerportal/MakeReview'
+import Offer from './components/Offer'
 
 function App() {
 	const [isAuth, setIsAuth] = useState(false)
@@ -29,13 +31,14 @@ function App() {
 	return (
 		<Router>
 			<GlobalStyle />
-			{isAuth ? <NavbarUser /> : <Navbar />}
+
 			<Routes>
 				<Route path='/' element={<HomePage />} />
 				<Route path='/offer' element={<Offers />} />
 				<Route path='/pricelist' element={<PriceList />} />
 				<Route path='/panel' element={<CustomerPortal userUid={userUid} />} />
 				<Route path='/login' element={<Login />} />
+				<Route path='/makereview' element={<MakeReview userUid={userUid} />} />
 			</Routes>
 
 			<Footer />

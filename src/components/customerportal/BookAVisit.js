@@ -1,10 +1,10 @@
-import { arrayUnion, updateDoc, doc } from "firebase/firestore";
-import { auth, db } from "./../../db";
-import { useState } from "react";
+import { arrayUnion, updateDoc, doc } from 'firebase/firestore';
+import { auth, db } from './../../db';
+import { useState } from 'react';
 
 const BookAVisit = ({ userUid }) => {
-  const [inputGroomer, setGroomer] = useState("Tommy");
-  const [inputDate, setDate] = useState("");
+  const [inputGroomer, setGroomer] = useState('Tommy');
+  const [inputDate, setDate] = useState('');
 
   // const bookNewVisit = async () => {
   //   const groomer = inputGroomer;
@@ -19,9 +19,11 @@ const BookAVisit = ({ userUid }) => {
     const bookedVisit = { groomer, date };
     console.log(bookedVisit);
 
-    await updateDoc(doc(db, "users", userUid), {
+    await updateDoc(doc(db, 'users', userUid), {
       visits: arrayUnion({ date: date, groomer: groomer }),
     });
+    setGroomer(inputGroomer);
+    setDate(inputDate);
   };
   return (
     <>
