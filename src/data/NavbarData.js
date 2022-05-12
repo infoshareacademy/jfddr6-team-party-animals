@@ -1,19 +1,39 @@
-export const navbarData = [
+export const privateNavbarData = [
 	{
-		to: 'creative',
+		to: '/',
 		text: 'Home',
 	},
 	{
-		to: 'offer',
+		to: '/offer',
 		text: 'Offer',
 	},
 	{
-		to: 'price list',
+		to: '/pricelist',
 		text: 'Price List',
 	},
 	{
-		to: 'customer portal',
+		to: '/panel',
 		text: 'Customer Portal',
 	},
-	
+
+	{
+		to: '/login',
+		text: 'Login',
+	},
+]
+
+export const publicNavbarData = [
+	{
+		to: '/offer',
+		text: 'Offer',
+	},
+	{
+		to: '/pricelist',
+		text: 'Price List',
+	},
+
+	{
+		to: '/login',
+		text: 'Login',
+	},
 ]

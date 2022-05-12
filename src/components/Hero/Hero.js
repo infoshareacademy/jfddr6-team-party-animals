@@ -15,10 +15,8 @@ import {
 import { useInView } from 'react-intersection-observer'
 import Modal from '../Modal/Modal'
 
-
 const Hero = () => {
 	const [showModal, setShowModal] = useState(false)
-	const dragConstaints = { top: 0, bottom: 0, right: 0, left: 0 }
 
 	const toggleModal = () => {
 		if (!showModal) {
@@ -29,12 +27,7 @@ const Hero = () => {
 		setShowModal(!showModal)
 	}
 
-	const { ref, inView } = useInView({
-		rootMargin: '-100px',
-	})
-	useEffect(() => {
-		console.log(inView)
-	}, [inView])
+	const { ref, inView } = useInView()
 
 	return (
 		<>
@@ -42,7 +35,7 @@ const Hero = () => {
 				<HeroImage className='pattern' src={`${process.env.PUBLIC_URL}/images/hero-pattern-bg-lg.png`} />
 				<HeroImage className='cat' src={`${process.env.PUBLIC_URL}/images/hero-cat-1.png`} />
 				<CharacterContainer>
-				<ImageCharacter className='picTwo' src={`${process.env.PUBLIC_URL}/images/image 2.png`} />
+					<ImageCharacter className='picTwo' src={`${process.env.PUBLIC_URL}/images/image 2.png`} />
 					<ImageCharacter className='picThree' src={`${process.env.PUBLIC_URL}/images/image 3.png`} />
 				</CharacterContainer>
 				<HeroContent>
