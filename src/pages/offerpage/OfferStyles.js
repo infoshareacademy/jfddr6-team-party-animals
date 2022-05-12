@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { motion } from 'framer-motion'
 
 export const ContentRow = styled.div`
 	display: flex;
@@ -14,7 +13,7 @@ export const ContentRow = styled.div`
 	}
 `
 
-export const ContentColumn = styled(motion.div)`
+export const ContentColumn = styled.div`
 	margin-bottom: 15px;
 	padding-right: 15px;
 	padding-left: 15px;
@@ -51,7 +50,7 @@ export const TextWrapper = styled.div`
 	}
 `
 
-export const ImgWrapper = styled(motion.div)`
+export const ImgWrapper = styled.div`
 	display: flex;
 	justify-content: ${({ imgstart }) => (imgstart ? 'flex-start' : 'flex-end')};
 	max-height: 600px;
@@ -73,7 +72,7 @@ export const ImgWrapper = styled(motion.div)`
 	}
 `
 
-export const TopLine = styled.div`
+export const offerText = styled.div`
 	font-size: 0.9rem;
 	line-height: 16px;
 	font-weight: 700;
@@ -82,7 +81,7 @@ export const TopLine = styled.div`
 	color: #979797;
 `
 
-export const Img = styled(motion.img)`
+export const Img = styled.img`
 	padding-right: 0;
 	border: 0;
 	max-width: 100%;
