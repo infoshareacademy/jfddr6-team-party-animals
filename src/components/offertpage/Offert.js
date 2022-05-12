@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react'
 import { Container, Section } from '../../globalStyles'
-import { ContentRow, TextWrapper, TopLine, Heading, Subtitle, ImgWrapper, Img, ContentColumn } from './ContentStyles'
+import { ContentRow, TextWrapper, TopLine, Heading, Subtitle, ImgWrapper, Img, ContentColumn } from './OfferStyles'
 import { useInView } from 'react-intersection-observer'
 import { useAnimation } from 'framer-motion'
 import Tilt from 'react-parallax-tilt'
 
-const Content = ({ topLine, headline, description, img, alt, backgroundcolor, inverse, reverse, bigimage }) => {
+const Offert = ({ topLine, headline, description, img, alt, backgroundcolor, inverse, reverse, bigimage }) => {
 	const initial = { opacity: 0, y: 30 }
 	const transition = { delay: 0.3, duration: 0.6 }
 	const animation = useAnimation()
@@ -47,4 +47,4 @@ const Content = ({ topLine, headline, description, img, alt, backgroundcolor, in
 	)
 }
 
-export default Content
+export default Offert

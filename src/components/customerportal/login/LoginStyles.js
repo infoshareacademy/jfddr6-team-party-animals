@@ -1,6 +1,48 @@
-import styled from 'styled-components'
-import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 
+import styled from 'styled-components'
+
+export const Nav = styled.div`
+	background-image: linear-gradient(to bottom right, #e0e4e5, #dfb06e, #020024);
+	background-size: cover;
+	background-attachment: fixed;
+	z-index: 11;
+	align-items: center;
+	height: 640px;
+	position: relative;
+	display: flex;
+
+	@media screen and (min-width: 768px) {
+		height: 592px;
+	}
+
+	@media screen and (min-width: 992px) {
+		height: 710px;
+	}
+
+	@media screen and (min-width: 1200px) {
+		height: 1200px;
+	}
+`
+
+export const NavbarContainer = styled.img`
+	z-index: 10;
+	position: absolute;
+	left: 0;
+	object-fit: cover;
+
+	&.pattern {
+		height: 100%;
+		max-height: 100%;
+		top: 0;
+	}
+
+	&.cat {
+		bottom: 0;
+		width: 800px;
+		left: 0px;
+	}
+`
 
 export const FormSection = styled.div`
 	padding: clamp(50px, 30vh, 100px) 0;
@@ -15,6 +57,7 @@ export const FormTitle = styled.h1`
 `
 export const FormContainer = styled.div`
 	display: flex;
+	justify-content: center;
 `
 export const FormColumn = styled.div`
 	margin-bottom: 15px;
@@ -70,12 +113,6 @@ export const FormButton = styled.button`
 		transition: background-color 0.4s ease-in;
 	}
 `
-export const FormMessage = styled(motion.div)`
-	color: ${({ error }) => (error ? 'red' : 'green')};
-	padding: 5px;
-	text-align: center;
-	margin-top: 1rem;
-`
 export const FormInputRow = styled.div`
 	display: flex;
 	justify-content: center;
@@ -98,10 +135,4 @@ export const FormInput = styled.input`
 	border: none;
 	font-size: 1rem;
 	border-bottom: 1px solid #cecece;
-`
-export const FormLabel = styled.label`
-	display: inline-block;
-	font-size: 0.9rem;
-	margin-bottom: 0.3rem;
-	color: #666;
 `

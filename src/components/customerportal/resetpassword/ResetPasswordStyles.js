@@ -1,7 +1,4 @@
 import styled from 'styled-components'
-import { motion } from 'framer-motion'
-
-
 export const FormSection = styled.div`
 	padding: clamp(50px, 30vh, 100px) 0;
 	border-radius: 30px;
@@ -15,6 +12,7 @@ export const FormTitle = styled.h1`
 `
 export const FormContainer = styled.div`
 	display: flex;
+	justify-content: center;
 `
 export const FormColumn = styled.div`
 	margin-bottom: 15px;
@@ -48,6 +46,7 @@ export const FormWrapper = styled.form`
 	max-width: 540px;
 	padding-top: 0;
 	width: 100%;
+	left
 `
 export const FormButton = styled.button`
 	background-color: #dfb06e;
@@ -69,12 +68,6 @@ export const FormButton = styled.button`
 		background-color: #020024;
 		transition: background-color 0.4s ease-in;
 	}
-`
-export const FormMessage = styled(motion.div)`
-	color: ${({ error }) => (error ? 'red' : 'green')};
-	padding: 5px;
-	text-align: center;
-	margin-top: 1rem;
 `
 export const FormInputRow = styled.div`
 	display: flex;
@@ -98,10 +91,4 @@ export const FormInput = styled.input`
 	border: none;
 	font-size: 1rem;
 	border-bottom: 1px solid #cecece;
-`
-export const FormLabel = styled.label`
-	display: inline-block;
-	font-size: 0.9rem;
-	margin-bottom: 0.3rem;
-	color: #666;
 `
