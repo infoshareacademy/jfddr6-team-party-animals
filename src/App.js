@@ -7,7 +7,7 @@ import CustomerPortal from './components/customerportal/CustomerPortal';
 import PriceList from './pages/PriceList';
 import './fontello/css/fontello.css';
 import Login from './components/customerportal/login/Login';
-import Offer from './pages/Offer';
+import Offer from './components/Offer';
 import NavbarUser from './components/customerportal/NavbarUser';
 import { useState } from 'react';
 import { onAuthStateChanged } from 'firebase/auth';
