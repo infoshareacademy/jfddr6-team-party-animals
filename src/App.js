@@ -14,31 +14,32 @@ import { onAuthStateChanged } from 'firebase/auth'
 import { auth } from './db'
 
 function App() {
-	const [isAuth, setIsAuth] = useState(false)
-	const [userUid, setUserUid] = useState(false)
-	onAuthStateChanged(auth, user => {
-		if (user) {
-			setUserUid(user.uid)
-			setIsAuth(user.email)
-		} else {
-			setIsAuth(false)
-		}
-	})
-	return (
-		<Router>
-			<GlobalStyle />
-			<Navbar />
-			<Routes>
-				<Route path='/' element={<HomePage />} />
-				<Route path='/offer' element={<Offer />} />
-				<Route path='/pricelist' element={<PriceList />} />
-				<Route path='/panel' element={<CustomerPortal userUid={userUid} />} />
-				<Route path='/login' element={<Login />} />
-			</Routes>
-			<NavbarUser />
-			<Footer />
-		</Router>
-	)
+  const [isAuth, setIsAuth] = useState(false);
+  const [userUid, setUserUid] = useState(false);
+  onAuthStateChanged(auth, (user) => {
+    if (user) {
+      setUserUid(user.uid);
+      setIsAuth(user.email);
+    } else {
+      setIsAuth(false);
+      setUserUid(false);
+    }
+  });
+  return (
+    <Router>
+      <GlobalStyle />
+      {isAuth ? <NavbarUser /> : <Navbar />}
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/offer" element={<Offer />} />
+        <Route path="/pricelist" element={<PriceList />} />
+        <Route path="/panel" element={<CustomerPortal userUid={userUid} />} />
+        <Route path="/login" element={<Login />} />
+      </Routes>
+
+      <Footer />
+    </Router>
+  );
 }
 
 export default App
