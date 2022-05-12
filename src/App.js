@@ -12,6 +12,7 @@ import NavbarUser from './components/customerportal/NavbarUser'
 import { useState } from 'react'
 import { onAuthStateChanged } from 'firebase/auth'
 import { auth } from './db'
+import NavbarWrapp from './components/NavbarWrapp'
 
 function App() {
 	const [isAuth, setIsAuth] = useState(false)
