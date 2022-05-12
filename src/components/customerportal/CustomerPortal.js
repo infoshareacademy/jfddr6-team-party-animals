@@ -1,11 +1,21 @@
-import VisitListRender from './VisitListRender';
+import VisitListRender from "./VisitListRender";
+import BookAVisit from "./BookAVisit";
+import Login from "./login/Login";
+import CreateAccount from "./CreateAccount";
+import MakeReview from "./MakeReview";
+import ReviewListRender from "./ReviewListRender";
 
-const CustomerPortal = () => {
+const CustomerPortal = ({ userUid }) => {
   return (
     <div>
       Customer Portal
       <div>
+        <CreateAccount />
+        <Login />
+        <BookAVisit userUid={userUid} />
         <VisitListRender />
+        <MakeReview userUid={userUid} />
+        <ReviewListRender />
       </div>
     </div>
   );
