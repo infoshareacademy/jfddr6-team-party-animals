@@ -27,3 +27,33 @@ export const offerTwo = {
 	imgstart: 'start',
 	start: 'true',
 }
+
+export const offerThree = {
+	reverse: true,
+	offerText: {
+		text: 'Bath With Aromatherapy Mist',
+	},
+
+	headline: 'Best in Show Resort Pet Points Rewards',
+	description:
+		'Our Dog Grooming Salon & Spa offers all the luxuries you expect from a human spa. Whether your pup needs a clean up after a day of fun or just some pampering, your pet is guaranteed to look amazing after a luxurious day at our spa. We’ll make your pet look fabulous!',
+	img: '/gallery/img 8.jpg',
+	backgroundcolor: 'linear-gradient(  150deg  ,#e0e4e5, #dfb06e, #020024)',
+	imgstart: 'start',
+	start: 'true',
+}
+
+export const offerFour = {
+	reverse: true,
+	offerText: {
+		text: 'Bath With Aromatherapy Mist',
+	},
+
+	headline: 'Best in Show Resort Pet Points Rewards',
+	description:
+		'Our Dog Grooming Salon & Spa offers all the luxuries you expect from a human spa. Whether your pup needs a clean up after a day of fun or just some pampering, your pet is guaranteed to look amazing after a luxurious day at our spa. We’ll make your pet look fabulous!',
+	img: '/gallery/img 8.jpg',
+	backgroundcolor: 'linear-gradient(  150deg  ,#e0e4e5, #dfb06e, #020024)',
+	imgstart: 'start',
+	start: 'true',
+}

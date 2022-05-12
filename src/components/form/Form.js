@@ -24,8 +24,6 @@ const Form = () => {
 	const [error, setError] = useState(null)
 	const [success, setSuccess] = useState(null)
 
-	console.log(error, success)
-
 	const registerUser = async (email, password) => {
 		const response = await createUserWithEmailAndPassword(auth, email, password)
 		return response.user.uid
