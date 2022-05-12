@@ -29,7 +29,7 @@ function App() {
   return (
     <Router>
       <GlobalStyle />
-      {isAuth ? <NavbarUser /> : <Navbar />}
+
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/offer" element={<Offer />} />
