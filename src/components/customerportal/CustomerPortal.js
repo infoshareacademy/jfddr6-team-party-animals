@@ -1,19 +1,22 @@
-import VisitListRender from "./VisitListRender";
-import BookAVisit from "./BookAVisit";
-import MakeReview from "./MakeReview";
-import ReviewListRender from "./ReviewListRender";
+import VisitList from './VisitList';
+import BookAVisit from './BookAVisit';
+import MakeReview from './MakeReview';
+import ReviewList from './ReviewList';
+import { Link } from 'react-router-dom';
+import { Container, ContentRow, NavLink } from './CustomerPortalStyles';
 
 const CustomerPortal = ({ userUid }) => {
   return (
-    <div>
-      Customer Portal
-      <div>
-        <BookAVisit userUid={userUid} />
-        <VisitListRender />
-        <MakeReview userUid={userUid} />
-        <ReviewListRender />
-      </div>
-    </div>
+    <Container>
+      <ContentRow>
+        <div>
+          <VisitList />
+          <BookAVisit userUid={userUid} />
+          <ReviewList />
+          <NavLink to="/makereview">Add review</NavLink>
+        </div>
+      </ContentRow>
+    </Container>
   );
 };
 
