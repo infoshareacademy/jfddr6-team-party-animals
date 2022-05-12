@@ -43,7 +43,7 @@ const ResetPassword = () => {
 									placeholder='Your email'
 									onChange={e => setEmailInput(e.target.value)}
 								/>
-								<FormButton type='submit'>Resetuj hasło</FormButton>
+								<FormButton type='submit'>Reset Password</FormButton>
 								{passwordReset && <div>Password was reset, check you email.</div>}
 							</FormInputRow>
 						</FormWrapper>

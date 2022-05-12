@@ -37,7 +37,7 @@ export const NavIcon = styled.img`
 	width: 4rem;
 	transform: rotate(-25deg);
 	align-items: flex-start;
-	display:flex;
+	display: flex;
 `
 
 export const MobileIcon = styled.div`
@@ -115,7 +115,7 @@ export const NavLinks = styled(Link)`
 
 		&:hover {
 			border-bottom: none;
-			color: #dfb06e;
+			color: #020024;
 			transition: all 0.3s ease;
 		}
 	}

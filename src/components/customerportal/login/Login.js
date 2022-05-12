@@ -98,7 +98,7 @@ const Login = () => {
 			<Container>
 				<FormRow>
 					<FormColumn>
-						<FormTitle>Sign Up</FormTitle>
+						<FormTitle>Just Jump to Your Account</FormTitle>
 						<FormWrapper onSubmit={handleSubmit}>
 							<FormInputRow>
 								<FormInput
@@ -114,8 +114,8 @@ const Login = () => {
 									onChange={e => setInputPassword(e.target.value)}
 								/>
 							</FormInputRow>
-							<FormButton type='submit'>Sign Up</FormButton>
-							<FormButton type='submit'>Sign Out</FormButton>
+							<FormButton type='submit'>Log in</FormButton>
+							<FormButton type='submit'>Log Out</FormButton>
 						</FormWrapper>
 						<ResetPassword />
 					</FormColumn>
