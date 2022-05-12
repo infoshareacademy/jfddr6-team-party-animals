@@ -82,7 +82,7 @@ const Form = () => {
 			<Container>
 				<FormRow>
 					<FormColumn>
-						<FormTitle>Sign Up</FormTitle>
+						<FormTitle>Create Account</FormTitle>
 						<FormWrapper onSubmit={handleSubmit}>
 							{formData.map((el, index) => (
 								<FormInputRow key={index}>

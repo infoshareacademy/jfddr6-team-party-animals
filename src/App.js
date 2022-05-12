@@ -1,17 +1,17 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Footer from "./components/footer/Footer";
-import GlobalStyle from "./globalStyles";
-import HomePage from "./pages/HomePage";
-import Navbar from "./components/Navbar/Navbar";
-import CustomerPortal from "./components/customerportal/CustomerPortal";
-import Offer from "./pages/Offer";
-import PriceList from "./pages/PriceList";
-import "./fontello/css/fontello.css";
-import Login from "./components/customerportal/login/Login";
-import NavbarUser from "./components/customerportal/NavbarUser";
-import { useState } from "react";
-import { onAuthStateChanged } from "firebase/auth";
-import { auth } from "./db";
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import Footer from './components/footer/Footer'
+import GlobalStyle from './globalStyles'
+import HomePage from './pages/HomePage'
+import Navbar from './components/Navbar/Navbar'
+import CustomerPortal from './components/customerportal/CustomerPortal'
+import PriceList from './pages/PriceList'
+import './fontello/css/fontello.css'
+import Login from './components/customerportal/login/Login'
+import Offer from './pages/Offer'
+import NavbarUser from './components/customerportal/NavbarUser'
+import { useState } from 'react'
+import { onAuthStateChanged } from 'firebase/auth'
+import { auth } from './db'
 
 function App() {
   const [isAuth, setIsAuth] = useState(false);
@@ -42,4 +42,4 @@ function App() {
   );
 }
 
-export default App;
+export default App
