@@ -1,39 +1,34 @@
 export const privateNavbarData = [
-	{
-		to: '/',
-		text: 'Home',
-	},
-	{
-		to: '/offer',
-		text: 'Offer',
-	},
-	{
-		to: '/pricelist',
-		text: 'Price List',
-	},
-	{
-		to: '/panel',
-		text: 'Customer Portal',
-	},
-
-	{
-		to: '/login',
-		text: 'Login',
-	},
-]
+  {
+    to: "/",
+    text: "Home",
+  },
+  {
+    to: "/offer",
+    text: "Offer",
+  },
+  {
+    to: "/pricelist",
+    text: "Price List",
+  },
+  {
+    to: "/panel",
+    text: "Customer Portal",
+  },
+];
 
 export const publicNavbarData = [
-	{
-		to: '/offer',
-		text: 'Offer',
-	},
-	{
-		to: '/pricelist',
-		text: 'Price List',
-	},
+  {
+    to: "/offer",
+    text: "Offer",
+  },
+  {
+    to: "/pricelist",
+    text: "Price List",
+  },
 
-	{
-		to: '/login',
-		text: 'Login',
-	},
-]
+  {
+    to: "/login",
+    text: "Login",
+  },
+];

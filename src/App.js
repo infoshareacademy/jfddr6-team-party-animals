@@ -22,12 +22,13 @@ function App() {
       setIsAuth(user.email);
     } else {
       setIsAuth(false);
+      setUserUid(false);
     }
   });
   return (
     <Router>
       <GlobalStyle />
-      <Navbar />
+      {isAuth ? <NavbarUser /> : <Navbar />}
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/offer" element={<Offer />} />
@@ -35,7 +36,7 @@ function App() {
         <Route path="/panel" element={<CustomerPortal userUid={userUid} />} />
         <Route path="/login" element={<Login />} />
       </Routes>
-      <NavbarUser />
+
       <Footer />
     </Router>
   );
