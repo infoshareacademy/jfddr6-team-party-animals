@@ -7,19 +7,14 @@ import { Heading } from '../globalStyles'
 import { offerOne, offerTwo } from '../data/OfferData'
 import Offer from '../components/Offer'
 
-const HomePage = () => {
-	
+const Offers = () => {
 	return (
 		<>
-			<Hero />
-			<Features />
 			<Heading id='offer'>Our Offer</Heading>
-			<Content {...partOne} />
-			<Content {...partTwo} />
 			<Offer {...offerOne} />
 			<Offer {...offerTwo} />
 		</>
 	)
 }
 
-export default HomePage
+export default Offers

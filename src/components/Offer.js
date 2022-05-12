@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { Container, Section } from './../globalStyles'
+import { Container, Section } from '../globalStyles'
 import {
 	ContentRow,
 	TextWrapper,
@@ -9,11 +9,10 @@ import {
 	ImgWrapper,
 	Img,
 	ContentColumn,
-} from './../pages/offerpage/OfferStyles'
+} from '../pages/offerpage/OfferStyles'
 import { useInView } from 'react-intersection-observer'
 import { useAnimation } from 'framer-motion'
 import Tilt from 'react-parallax-tilt'
-import { OfferData } from './../data/OfferData'
 
 const Offer = ({ offerText, headline, description, img, alt, backgroundcolor, inverse, reverse, bigimage }) => {
 	const initial = { opacity: 0, y: 30 }
@@ -39,7 +38,8 @@ const Offer = ({ offerText, headline, description, img, alt, backgroundcolor, in
 				<ContentRow reverse={reverse}>
 					<ContentColumn>
 						<TextWrapper>
-							<>{offerText}</>
+							<>{offerText ? offerText.text : ''}</>
+
 							<Heading>{headline}</Heading>
 							<Subtitle inverse={inverse}>{description}</Subtitle>
 						</TextWrapper>
