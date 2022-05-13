@@ -1,1 +1,0 @@
-# jfddr6-team-party-animals

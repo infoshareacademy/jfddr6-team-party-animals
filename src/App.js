@@ -8,30 +8,26 @@ import PriceList from './pages/PriceList'
 import './fontello/css/fontello.css'
 import Login from './components/customerportal/login/Login'
 import Offers from './pages/Offers'
-import NavbarUser from './components/customerportal/NavbarUser'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { onAuthStateChanged } from 'firebase/auth'
 import { auth } from './db'
-import NavbarWrapp from './components/NavbarWrapp'
 import MakeReview from './components/customerportal/MakeReview'
-import Offer from './components/Offer'
 
 function App() {
-	const [isAuth, setIsAuth] = useState(false)
+	const [isLogged, setIsLogged] = useState(!!auth.currentUser)
 	const [userUid, setUserUid] = useState(false)
-	onAuthStateChanged(auth, user => {
-		if (user) {
-			setUserUid(user.uid)
-			setIsAuth(user.email)
-		} else {
-			setIsAuth(false)
-			setUserUid(false)
-		}
-	})
+	useEffect(
+		() =>
+			onAuthStateChanged(auth, user => {
+				setIsLogged(!!user)
+				setUserUid(user?.uid ?? null)
+			}),
+		[]
+	)
 	return (
 		<Router>
 			<GlobalStyle />
-
+			<Navbar isLogged={isLogged} />
 			<Routes>
 				<Route path='/' element={<HomePage />} />
 				<Route path='/offer' element={<Offers />} />
@@ -40,7 +36,6 @@ function App() {
 				<Route path='/login' element={<Login />} />
 				<Route path='/makereview' element={<MakeReview userUid={userUid} />} />
 			</Routes>
-
 			<Footer />
 		</Router>
 	)

@@ -1,20 +1,40 @@
-import styled from 'styled-components';
-import { motion } from 'framer-motion';
+import styled from 'styled-components'
 
-export const Root = styled.div`
-  display: flex;
-  width: 100vw;
-  font-size: 1rem;
-  line-height: 1.2em;
-  color: #020024;
-  margin-bottom: 5px;
-`;
+export const Container = styled.div`
+	display: flex;
+	justify-content: left;
+`
 
-export const Review = styled.div`
-  background: rgba(223, 176, 110, 1);
-  border: solid 2px #020024;
-  margin: 0.5em;
-  padding: 1.2em;
-  max-width: 20rem;
-  max-height: 50em;
-`;
+export const Column = styled.div`
+	margin-bottom: 15px;
+	padding-right: 15px;
+	padding-left: 15px;
+	padding: 0 15px;
+	flex: 1;
+	max-width: 70%;
+	@media screen and (max-width: 768px) {
+		max-width: 100% !important;
+		flex-basis: 100%;
+		justify-content: center;
+		align-items: center;
+	}
+	img {
+		@media screen and (max-width: 768px) {
+			display: none;
+		}
+	}
+	p {
+		margin: 10px;
+	}
+`
+
+export const span = styled.span`
+	display: block;
+	padding-bottom: 10px;
+	outline: none;
+	height: 40px;
+	width: 100%;
+	font-size: 1.5rem;
+	color: #020024;
+	border-bottom: 1px solid #cecece;
+`

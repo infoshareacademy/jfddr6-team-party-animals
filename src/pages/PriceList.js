@@ -1,11 +1,9 @@
-import NavbarWrapp from './../components/NavbarWrapp'
-
 import React from 'react'
 
 function PriceList() {
 	return (
 		<>
-			<NavbarWrapp />
+		
 			<div className='container' style={{ width: '100%', marginTop: '100px', padding: '0 50px' }}>
 				<table id='price'>
 					<tbody>

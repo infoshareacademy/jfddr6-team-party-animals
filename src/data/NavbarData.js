@@ -19,6 +19,10 @@ export const privateNavbarData = [
 
 export const publicNavbarData = [
   {
+    to: "/",
+    text: "Home",
+  },
+  {
     to: "/offer",
     text: "Offer",
   },
