@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+# jfddr6-team-party-animals
+![Party Animals Logo](./public/images/logo.png "Logo")
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Welcome to our one and only **Party Animals** project
 
-## Available Scripts
+## Let us introduce our team:
 
-In the project directory, you can run:
+- **_Żaneta Lenart_** [GitHub](https://github.com/Leena2405)
 
-### `npm start`
+- **_Bartłomiej Ciupa_** [GitHub](https://github.com/bartlomiejciupa)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **_Tomasz Paszkowski_** [GitHub](https://github.com/Tommy-Inc)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<h3>If you want to know more, check below link:
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+ [Party Animals](https://one-and-only-party-animals.netlify.app/)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+*Party Animals* is grooming salon for pets website with offer information, appointment reservation system option, adding reviews.
+General information is available for all visitors, but to book a visit or add a review you will have to be logged in. To create account simply push "Just Try" button.
+### Technology:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- React (with React Router and CSS Modules)
+- JavaScript
+- CSS3
+- HTML5
+- NPM Packages (Fonts, Firestore)
+- Firebase
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Methodology
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+- Scrum
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Party Animals was fully designed and developed during last two weeks of infoShare Academy front-end bootcamp. We used Scrum methodology, Jira project management tool.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![First Page](./public/images/hero-cat-1.png "Hero Cat")
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+- Party Animals was fully designed and developed during last two weeks of *infoShare Academy* front-end bootcamp. We used Scrum methodology, Jira project management tool and our work was divided into many short (2-3days) sprints.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- We achieved reaching our MVP (Minimal Viable Product) goals due to commitment, hard work and pure brilliance of our team :D
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Users can register, login in and book a visit, then make a review and read all users reviews. 

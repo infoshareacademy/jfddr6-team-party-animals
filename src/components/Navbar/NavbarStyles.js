@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 
 export const Nav = styled.nav`
 	background: transparent;
+	background-image: ${props => props.transparent ? '' : 'linear-gradient(to bottom right, #e0e4e5, #dfb06e, #020024)'};
 	margin-bottom: -80px;
 	height: 80px;
 	display: flex;
